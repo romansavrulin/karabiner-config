@@ -21,6 +21,69 @@
                         "description": "Autoshift Alphabets only: Post alphabets if pressed alone, Capital alphas if held down",
                         "manipulators": [
                             {
+                                "type": "basic",
+                                "parameters": {
+                                    "basic.simultaneous_threshold_milliseconds": 1,
+                                    "basic.to_if_held_down_threshold_milliseconds": 120
+                                },
+                                "from": {
+                                    "simultaneous": [
+                                        {
+                                            "key_code": "spacebar"
+                                        }
+                                    ],
+                                    "simultaneous_options": {
+                                        "key_down_order": "insensitive",
+                                        "key_up_order": "insensitive",
+                                        "detect_key_down_uninterruptedly": true,
+                                        "to_after_key_up": [
+                                            {
+                                              "set_variable": {
+                                                "name": "nav_layer",
+                                                "value": 0
+                                               }
+                                            },
+                                            {
+                                                "key_code": "vk_none",
+                                                "repeat": false
+                                            }
+                                        ]
+                                    },
+                                    "modifiers": {}
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "vk_none",
+                                        "repeat": false
+                                    },
+                                    {
+                                        "set_variable": {
+                                            "name": "nav_layer",
+                                            "value": 1
+                                        }
+                                    }
+                                ],
+                                "to_after_key_up": [
+                                    {
+                                        "key_code": "spacebar",
+                                        "repeat": false
+                                    },
+                                    {
+                                      "set_variable": {
+                                        "name": "nav_layer",
+                                        "value": 0
+                                      }
+                                    }
+                                ],
+                                "to_if_held_down": [
+                                    {
+                                        "halt": true,
+                                        "key_code": "vk_none",
+                                        "repeat": false
+                                    }
+                                ]
+                            },
+                            {
                                 "conditions": [
                                     {
                                         "name": "nav_layer",
@@ -172,40 +235,6 @@
                                 ],
                                 "type": "basic"
                             },
-
-
-                            {
-                                "from": {
-                                    "key_code": "right_command",
-                                    "modifiers": {
-                                        "optional": [
-                                            "left_command",
-                                            "left_option"
-                                        ]
-                                    }
-                                },
-                                "to_after_key_up": [
-                                    {
-                                        "set_variable": {
-                                            "name": "nav_layer",
-                                            "value": 0
-                                        }
-                                    }
-                                ],
-                                "to": [
-                                    {
-                                        "set_variable": {
-                                            "name": "nav_layer",
-                                            "value": 1
-                                        }
-                                    },
-                                    {
-                                        "key_code": "vk_none"
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-
                             {
                                 "conditions": [
                                     {
@@ -275,6 +304,74 @@
                             },
 
                             {
+                                "conditions": [
+                                    {
+                                        "name": "nav_layer",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    },
+                                    {
+                                        "input_sources": [
+                                            {
+                                                "language": "en"
+                                            }
+                                        ],
+                                        "type": "input_source_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "u"
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "slash",
+                                        "repeat": false,
+                                        "modifiers": [
+                                            "left_shift"
+                                        ]
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "nav_layer",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    },
+                                    {
+                                        "input_sources": [
+                                            {
+                                                "language": "ru"
+                                            }
+                                        ],
+                                        "type": "input_source_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "u"
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "caps_lock"
+                                    },
+                                    {
+                                        "key_code": "slash",
+                                        "modifiers": [
+                                            "left_shift"
+                                        ]
+                                    },
+                                    {
+                                        "key_code": "caps_lock",
+                                        "repeat": false
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+
+                            {
                                 "from": {
                                     "key_code": "close_bracket",
                                     "modifiers": {
@@ -321,21 +418,6 @@
                                 ],
                                 "type": "basic"
                             },
-
-                            {
-                                "from": {
-                                    "key_code": "square"
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "return_or_enter"
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-
-
-
                             {
                                 "from": {
                                     "key_code": "q",
@@ -1260,44 +1342,6 @@
                                     }
                                 ],
                                 "type": "basic"
-                            },
-                            {
-                                "type": "basic",
-                                "from": {
-                                    "key_code": "spacebar",
-                                    "modifiers": {}
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "vk_none",
-                                        "repeat": false
-                                    },
-                                    {
-                                        "set_variable": {
-                                            "name": "nav_layer",
-                                            "value": 1
-                                        }
-                                    }
-                                ],
-                                "to_after_key_up": [
-                                    {
-                                        "key_code": "spacebar",
-                                        "repeat": false
-                                    },
-                                    {
-                                      "set_variable": {
-                                        "name": "nav_layer",
-                                        "value": 0
-                                      }
-                                    }
-                                ],
-                                "to_if_held_down": [
-                                    {
-                                        "halt": false,           
-                                        "key_code": "vk_none",
-                                        "repeat": false
-                                    }
-                                ]
                             },
                             {
                                 "from": {
