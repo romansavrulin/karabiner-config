@@ -24,7 +24,7 @@
                                 "type": "basic",
                                 "parameters": {
                                     "basic.simultaneous_threshold_milliseconds": 1,
-                                    "basic.to_if_held_down_threshold_milliseconds": 120
+                                    "basic.to_if_held_down_threshold_milliseconds": 150
                                 },
                                 "from": {
                                     "simultaneous": [
@@ -49,7 +49,9 @@
                                             }
                                         ]
                                     },
-                                    "modifiers": {}
+                                    "modifiers": {
+                                        "optional": ["any"]
+                                    }
                                 },
                                 "to": [
                                     {
