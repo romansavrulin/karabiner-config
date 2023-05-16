@@ -55,32 +55,39 @@
                                 },
                                 "to": [
                                     {
-                                        "key_code": "vk_none",
-                                        "repeat": false
-                                    },
-                                    {
                                         "set_variable": {
                                             "name": "nav_layer",
                                             "value": 1
                                         }
+                                    },
+                                    {
+                                        "key_code": "vk_none",
+                                        "repeat": false
                                     }
                                 ],
                                 "to_after_key_up": [
-                                    {
-                                        "key_code": "spacebar",
-                                        "repeat": false
-                                    },
                                     {
                                       "set_variable": {
                                         "name": "nav_layer",
                                         "value": 0
                                       }
+                                    },
+                                    {
+                                        "key_code": "vk_none",
+                                        "repeat": false
                                     }
                                 ],
                                 "to_if_held_down": [
                                     {
                                         "halt": true,
                                         "key_code": "vk_none",
+                                        "repeat": false
+                                    }
+                                ],
+                                "to_if_alone": [
+                                    {
+                                        "halt": true,
+                                        "key_code": "spacebar",
                                         "repeat": false
                                     }
                                 ]
@@ -311,6 +318,99 @@
                                         "name": "nav_layer",
                                         "type": "variable_if",
                                         "value": 1
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "m",
+                                    "modifiers": {
+                                         "optional": ["any"]
+                                    }
+                                },
+                                "to_after_key_up": [
+                                    {
+                                        "key_code": "hyphen",
+                                        "repeat": false
+                                    }
+                                ],
+                                "to_if_held_down": [
+                                    {
+                                        "halt": true,
+                                        "key_code": "hyphen",
+                                        "modifiers": [
+                                            "left_shift"
+                                        ],
+                                        "repeat": false
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "nav_layer",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "comma",
+                                    "modifiers": {
+                                         "optional": ["any"]
+                                    }
+                                },
+                                "to_after_key_up": [
+                                    {
+                                        "key_code": "equal_sign",
+                                        "repeat": false
+                                    }
+                                ],
+                                "to_if_held_down": [
+                                    {
+                                        "halt": true,
+                                        "key_code": "equal_sign",
+                                        "modifiers": [
+                                            "left_shift"
+                                        ],
+                                        "repeat": false
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "nav_layer",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "n",
+                                    "modifiers": {
+                                         "optional": ["any"]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "halt": true,
+                                        "key_code": "8",
+                                        "modifiers": [
+                                            "left_shift"
+                                        ],
+                                        "repeat": false
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "nav_layer",
+                                        "type": "variable_if",
+                                        "value": 1
                                     },
                                     {
                                         "input_sources": [
@@ -374,6 +474,17 @@
                             },
 
                             {
+                                "conditions": [
+                                    {
+                                        "type": "device_unless",
+                                        "identifiers": [
+                                            {
+                                                "vendor_id": 7504,
+                                                "product_id": 24926
+                                            }
+                                        ]
+                                    }
+                                ],
                                 "from": {
                                     "key_code": "close_bracket",
                                     "modifiers": {
