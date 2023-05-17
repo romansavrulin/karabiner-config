@@ -104,8 +104,7 @@
                                     "key_code": "o",
                                     "modifiers": {
                                         "optional": [
-                                            "left_command",
-                                            "left_option"
+                                            "any"
                                         ]
                                     }
                                 },
@@ -272,7 +271,8 @@
                                         ]
                                     }
                                 ],
-                                "type": "basic"
+                                "type": "basic",
+                                "description": "layout independent '@': en"
                             },
 
                             {
@@ -338,7 +338,89 @@
                                         }
                                     }
                                 ],  
-                                "type": "basic"
+                                "type": "basic",
+                                "description": "layout independent '@'': ru"
+                            },
+
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "nav_layer",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    },
+                                    {
+                                        "input_sources": [
+                                            {
+                                                "language": "en"
+                                            }
+                                        ],
+                                        "type": "input_source_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "h"
+                                },
+                                "to_after_key_up": [
+                                    {
+                                        "key_code": "semicolon",
+                                        "repeat": false,
+                                        "modifiers": [
+                                            "left_shift"
+                                        ]
+                                    }
+                                ],
+                                "to_if_held_down": [
+                                    {
+                                        "key_code": "semicolon",
+                                        "repeat": false,
+                                        "halt": true
+                                    }
+                                ],
+                                "type": "basic",
+                                "description": "layout independent ':;': en"
+                            },
+
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "nav_layer",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    },
+                                    {
+                                        "input_sources": [
+                                            {
+                                                "language": "ru"
+                                            }
+                                        ],
+                                        "type": "input_source_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "h"
+                                },
+                                "to_after_key_up": [
+                                    {
+                                        "key_code": "6",
+                                        "repeat": false,
+                                        "modifiers": [
+                                            "left_shift"
+                                        ]
+                                    }
+                                ],
+                                "to_if_held_down": [
+                                    {
+                                        "key_code": "4",
+                                        "repeat": false,
+                                        "modifiers": [
+                                            "left_shift"
+                                        ],
+                                        "halt": true
+                                    }
+                                ],
+                                "type": "basic",
+                                "description": "layout independent ':; ': ru"
                             },
 
                             {
@@ -402,6 +484,39 @@
                                         "name": "nav_layer",
                                         "type": "variable_if",
                                         "value": 1
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "period",
+                                    "modifiers": {
+                                         "optional": ["any"]
+                                    }
+                                },
+                                "to_after_key_up": [
+                                    {
+                                        "key_code": "equal_sign",
+                                        "repeat": false
+                                    }
+                                ],
+                                "to_if_held_down": [
+                                    {
+                                        "halt": true,
+                                        "key_code": "equal_sign",
+                                         "modifiers": [
+                                            "left_shift"
+                                        ],
+                                        "repeat": false
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "nav_layer",
+                                        "type": "variable_if",
+                                        "value": 1
                                     },
                                     {
                                         "input_sources": [
@@ -415,7 +530,7 @@
                                 "from": {
                                     "key_code": "u"
                                 },
-                                "to": [
+                                "to_after_key_up": [
                                     {
                                         "key_code": "slash",
                                         "repeat": false,
@@ -424,7 +539,18 @@
                                         ]
                                     }
                                 ],
-                                "type": "basic"
+                                "to_if_held_down": [
+                                    {
+                                        "key_code": "1",
+                                        "repeat": false,
+                                        "modifiers": [
+                                            "left_shift"
+                                        ],
+                                        "halt": true
+                                    }
+                                ],
+                                "type": "basic",
+                                "description": "layout independent '?!': en"
                             },
 
                             {
@@ -449,17 +575,27 @@
                                         "optional": [ "any" ]
                                     }
                                 },
-                                "to": [
+                                "to_after_key_up": [
                                     {
-                                        "sticky_modifier": {
-                                            "right_shift": "on"
-                                        }
-                                    },
-                                    {
-                                        "key_code": "7"
+                                        "key_code": "7",
+                                        "repeat": false,
+                                        "modifiers": [
+                                            "left_shift"
+                                        ]
                                     }
                                 ],
-                                "type": "basic"
+                                "to_if_held_down": [
+                                    {
+                                        "key_code": "1",
+                                        "repeat": false,
+                                        "modifiers": [
+                                            "left_shift"
+                                        ],
+                                        "halt": true
+                                    }
+                                ],
+                                "type": "basic",
+                                "description": "layout independent '?!': ru"
                             },
 
                             {
@@ -526,7 +662,45 @@
                                         ]
                                     }
                                 ],
-                                "type": "basic"
+                                "type": "basic",
+                                "description": "Asterisk '*' on apple kb"
+                            },
+
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "nav_layer",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    },
+                                    {
+                                        "type": "device_if",
+                                        "identifiers": [
+                                            {
+                                                "vendor_id": 7504,
+                                                "product_id": 24926
+                                            }
+                                        ]
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "b",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "8",
+                                        "modifiers": [
+                                            "left_shift"
+                                        ]
+                                    }
+                                ],
+                                "type": "basic",
+                                "description": "Asterisk '*' on tk44 kb"
                             },
 
                             {
