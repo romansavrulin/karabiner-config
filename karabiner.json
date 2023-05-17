@@ -296,19 +296,48 @@
                                 },
                                 "to": [
                                     {
-                                        "key_code": "caps_lock"
+                                        "key_code": "caps_lock",
+                                        "repeat": true
                                     },
                                     {
-                                        "key_code": "2",
-                                        "modifiers": [
-                                            "left_shift"
-                                        ]
+                                         "select_input_source": {
+                                            "language": "en"
+                                        }
                                     },
+                                    {
+                                        "key_code": "vk_none"
+                                    },
+                                    {
+                                        "sticky_modifier": {
+                                            "right_shift": "on"
+                                        }
+                                    },
+                                    {
+                                        "key_code": "2"
+                                    },
+                                    {
+                                        "key_code": "vk_none"
+                                    },
+                                    {
+                                        "sticky_modifier": {
+                                            "right_shift": "off"
+                                        }
+                                    },
+                                   
                                     {
                                         "key_code": "caps_lock",
+                                        "repeat": true
+                                    },
+                                    {
+                                        "key_code": "vk_none",
                                         "repeat": false
+                                    },
+                                    {
+                                         "select_input_source": {
+                                            "language": "ru"
+                                        }
                                     }
-                                ],
+                                ],  
                                 "type": "basic"
                             },
 
@@ -350,14 +379,14 @@
                                 },
                                 "to_after_key_up": [
                                     {
-                                        "key_code": "equal_sign",
+                                        "key_code": "hyphen",
                                         "repeat": false
                                     }
                                 ],
                                 "to_if_held_down": [
                                     {
                                         "halt": true,
-                                        "key_code": "equal_sign",
+                                        "key_code": "hyphen",
                                         "modifiers": [
                                             "left_shift"
                                         ],
@@ -415,49 +444,50 @@
                                     }
                                 ],
                                 "from": {
-                                    "key_code": "u"
+                                    "key_code": "u",
+                                    "modifiers": {
+                                        "optional": [ "any" ]
+                                    }
                                 },
                                 "to": [
                                     {
-                                        "key_code": "caps_lock"
+                                        "sticky_modifier": {
+                                            "right_shift": "on"
+                                        }
                                     },
                                     {
-                                        "key_code": "slash",
-                                        "modifiers": [
-                                            "left_shift"
-                                        ]
-                                    },
-                                    {
-                                        "key_code": "caps_lock",
-                                        "repeat": false
+                                        "key_code": "7"
                                     }
                                 ],
                                 "type": "basic"
                             },
 
                             {
-                                "conditions": [
-                                    {
-                                        "type": "device_unless",
-                                        "identifiers": [
-                                            {
-                                                "vendor_id": 7504,
-                                                "product_id": 24926
-                                            }
-                                        ]
-                                    }
-                                ],
                                 "from": {
                                     "key_code": "close_bracket",
                                     "modifiers": {
                                         "optional": [
-                                            "any"
+                                            "left_command",
+                                            "left_control",
+                                            "left_alt",
+                                            "left_shift"
                                         ]
                                     }
                                 },
-                                "to": [
+                                "to_after_key_up": [
                                     {
-                                        "key_code": "return_or_enter"
+                                        "key_code": "close_bracket",
+                                        "repeat": false
+                                    }
+                                ],
+                                "to_if_held_down": [
+                                    {
+                                        "halt": true,
+                                        "key_code": "close_bracket",
+                                        "modifiers": [
+                                            "left_shift"
+                                        ],
+                                        "repeat": false
                                     }
                                 ],
                                 "type": "basic"
@@ -490,7 +520,10 @@
                                 },
                                 "to": [
                                     {
-                                        "key_code": "return_or_enter"
+                                        "key_code": "8",
+                                        "modifiers": [
+                                            "left_shift"
+                                        ]
                                     }
                                 ],
                                 "type": "basic"
