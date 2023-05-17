@@ -18,6 +18,63 @@
                 },
                 "rules": [
                     {
+                        "description": "Labguage switch",
+                        "manipulators": [
+                            {
+                                "type": "basic",
+                                "conditions": [
+                                    {
+                                        "name": "nav_layer",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "f",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                         "select_input_source": {
+                                            "language": "ru"
+                                        }
+                                    }
+                                ],
+                                "description": "Switch language to RU"
+                            },
+                            {
+                                "type": "basic",
+                                "conditions": [
+                                    {
+                                        "name": "nav_layer",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "d",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                         "select_input_source": {
+                                            "language": "en"
+                                        }
+                                    }
+                                ],
+                                "description": "Switch language to EN"
+                            }
+                        ]
+                    },
+                    {
                         "description": "Navigation layer",
                         "manipulators": [
                             {
