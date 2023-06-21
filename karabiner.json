@@ -13,7 +13,7 @@
                     "basic.simultaneous_threshold_milliseconds": 50,
                     "basic.to_delayed_action_delay_milliseconds": 500,
                     "basic.to_if_alone_timeout_milliseconds": 1000,
-                    "basic.to_if_held_down_threshold_milliseconds": 150,
+                    "basic.to_if_held_down_threshold_milliseconds": 155,
                     "mouse_motion_to_scroll.speed": 100
                 },
                 "rules": [
@@ -133,7 +133,7 @@
                                         "value": 1
                                     }
                                 ],
-                                "description": "Switch language to RU",
+                                "description": "Toggle language with PuntoSwitcher",
                                 "from": {
                                     "key_code": "r",
                                     "modifiers": {
@@ -144,9 +144,12 @@
                                 },
                                 "to": [
                                     {
-                                        "select_input_source": {
-                                            "language": "ru"
-                                        }
+                                        "key_code": "r",
+                                        "modifiers": [
+                                            "left_option",
+                                            "left_command",
+                                            "left_control"
+                                        ]
                                     }
                                 ],
                                 "type": "basic"
@@ -169,6 +172,14 @@
                                     }
                                 },
                                 "to": [
+                                    {
+                                        "key_code": "r",
+                                        "modifiers": [
+                                            "left_option",
+                                            "left_command",
+                                            "left_control"
+                                        ]
+                                    },
                                     {
                                         "select_input_source": {
                                             "language": "en"
@@ -209,6 +220,83 @@
                                             "left_shift"
                                         ],
                                         "repeat": false
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "nav_layer",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    },
+                                    {
+                                        "input_sources": [
+                                            {
+                                                "language": "en"
+                                            }
+                                        ],
+                                        "type": "input_source_if"
+                                    }
+                                ],
+                                "description": "Comma on nav layer for EN",
+                                "from": {
+                                    "key_code": "slash"
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "comma",
+                                        "modifiers": [
+                                        ],
+                                        "repeat": false
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "description": "space + F (cmd + enter) quirks",
+                                "from": {
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    },
+                                    "simultaneous": [
+                                        {
+                                            "key_code": "f"
+                                        },
+                                        {
+                                            "key_code": "spacebar"
+                                        }
+                                    ],
+                                    "simultaneous_options": {
+                                        "key_down_order": "strict",
+                                        "key_up_when": "any",
+                                        "to_after_key_up": [
+                                            {
+                                                "set_variable": {
+                                                    "name": "nav_layer",
+                                                    "value": 0
+                                                }
+                                            }
+                                        ]
+                                    }
+                                },
+                                "parameters": {
+                                    "basic.simultaneous_threshold_milliseconds": 80
+                                },
+                                "to": [
+                                    {
+                                        "set_variable": {
+                                            "name": "nav_layer",
+                                            "value": 1
+                                        }
+                                    },
+                                    {
+                                        "sticky_modifier": {
+                                            "left_command": "on"
+                                        }
                                     }
                                 ],
                                 "type": "basic"
@@ -320,10 +408,10 @@
                                 "to": [
                                     {
                                         "key_code": "tab",
-                                        "repeat": true,
                                         "modifiers": [
                                             "left_command"
-                                        ]
+                                        ],
+                                        "repeat": true
                                     }
                                 ],
                                 "type": "basic"
@@ -347,11 +435,11 @@
                                 "to": [
                                     {
                                         "key_code": "tab",
-                                        "repeat": true,
                                         "modifiers": [
                                             "left_control",
                                             "left_shift"
-                                        ]
+                                        ],
+                                        "repeat": true
                                     }
                                 ],
                                 "type": "basic"
@@ -364,6 +452,7 @@
                                         "value": 1
                                     }
                                 ],
+                                "description": "Scroll back apps with tilde",
                                 "from": {
                                     "key_code": "caps_lock",
                                     "modifiers": {
@@ -376,13 +465,12 @@
                                 "to": [
                                     {
                                         "key_code": "grave_accent_and_tilde",
-                                        "repeat": true,
                                         "modifiers": [
                                             "left_command"
-                                        ]
+                                        ],
+                                        "repeat": true
                                     }
                                 ],
-                                "description": "Scroll back apps with tilde",
                                 "type": "basic"
                             },
                             {
@@ -661,8 +749,8 @@
                                         }
                                     },
                                     {
-                                        "key_code": "vk_none",
-                                        "halt": true
+                                        "halt": true,
+                                        "key_code": "vk_none"
                                     }
                                 ],
                                 "to_if_held_down": [
@@ -712,8 +800,8 @@
                                         }
                                     },
                                     {
-                                        "key_code": "vk_none",
-                                        "halt": true
+                                        "halt": true,
+                                        "key_code": "vk_none"
                                     },
                                     {
                                         "select_input_source": {
@@ -2157,6 +2245,9 @@
                                         ]
                                     }
                                 },
+                                "parameters": {
+                                    "basic.to_if_held_down_threshold_milliseconds": 190
+                                },
                                 "to_after_key_up": [
                                     {
                                         "key_code": "p",
@@ -2238,6 +2329,9 @@
                                         ]
                                     }
                                 },
+                                "parameters": {
+                                    "basic.to_if_held_down_threshold_milliseconds": 190
+                                },
                                 "to_after_key_up": [
                                     {
                                         "key_code": "d",
@@ -2264,6 +2358,9 @@
                                             "caps_lock"
                                         ]
                                     }
+                                },
+                                "parameters": {
+                                    "basic.to_if_held_down_threshold_milliseconds": 120
                                 },
                                 "to_after_key_up": [
                                     {
