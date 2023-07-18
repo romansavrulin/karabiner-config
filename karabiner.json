@@ -46,6 +46,42 @@
                                 "type": "basic"
                             },
                             {
+                                "parameters": {
+                                    "basic.simultaneous_threshold_milliseconds": 1,
+                                    "basic.to_if_held_down_threshold_milliseconds": 400
+                                },
+                                "conditions": [
+                                    {
+                                        "name": "nav_layer",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    }
+                                ],
+                                "description": "caps as ctrl mod",
+                                "from": {
+                                    "key_code": "caps_lock",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
+                                "to_after_key_up": [
+                                    {
+                                        "key_code": "caps_lock",
+                                        "repeat": false
+                                    }
+                                ],
+                                "to_if_held_down": [
+                                    {
+                                        "key_code": "left_control",
+                                        "repeat": true,
+                                        "halt": true
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
                                 "conditions": [
                                     {
                                         "name": "nav_layer",
@@ -153,40 +189,6 @@
                                     }
                                 ],
                                 "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "nav_layer",
-                                        "type": "variable_if",
-                                        "value": 1
-                                    }
-                                ],
-                                "description": "Switch language to EN",
-                                "from": {
-                                    "key_code": "e",
-                                    "modifiers": {
-                                        "optional": [
-                                            "any"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "r",
-                                        "modifiers": [
-                                            "left_option",
-                                            "left_command",
-                                            "left_control"
-                                        ]
-                                    },
-                                    {
-                                        "select_input_source": {
-                                            "language": "en"
-                                        }
-                                    }
-                                ],
-                                "type": "basic"
                             }
                         ]
                     },
@@ -230,53 +232,6 @@
                                     }
                                 ],
                                 "type": "basic"
-                            },
-                            {
-                                "description": "space + F (cmd + enter) quirks",
-                                "from": {
-                                    "modifiers": {
-                                        "optional": [
-                                            "any"
-                                        ]
-                                    },
-                                    "simultaneous": [
-                                        {
-                                            "key_code": "f"
-                                        },
-                                        {
-                                            "key_code": "spacebar"
-                                        }
-                                    ],
-                                    "simultaneous_options": {
-                                        "key_down_order": "strict",
-                                        "key_up_when": "any",
-                                        "to_after_key_up": [
-                                            {
-                                                "set_variable": {
-                                                    "name": "nav_layer",
-                                                    "value": 0
-                                                }
-                                            }
-                                        ]
-                                    }
-                                },
-                                "parameters": {
-                                    "basic.simultaneous_threshold_milliseconds": 80
-                                },
-                                "to": [
-                                    {
-                                        "set_variable": {
-                                            "name": "nav_layer",
-                                            "value": 1
-                                        }
-                                    },
-                                    {
-                                        "sticky_modifier": {
-                                            "left_command": "on"
-                                        }
-                                    }
-                                ],
-                                "type": "none"
                             },
                             {
                                 "from": {
@@ -615,6 +570,8 @@
                                 ],
                                 "type": "basic"
                             },
+
+
                             {
                                 "conditions": [
                                     {
@@ -631,23 +588,32 @@
                                         "type": "input_source_if"
                                     }
                                 ],
-                                "description": "layout independent '@': en",
+                                "description": "layout independent '&%': en",
                                 "from": {
-                                    "key_code": "w",
+                                    "key_code": "e",
                                     "modifiers": {
                                         "optional": [
                                             "any"
                                         ]
                                     }
                                 },
-                                "to": [
+                                "to_if_held_down": [
                                     {
-                                        "key_code": "2",
+                                        "key_code": "7",
                                         "modifiers": [
                                             "left_shift"
                                         ],
-                                        "repeat": false
+                                        "repeat": false,
+                                        "halt": true
                                     }
+                                ],
+                                "to_after_key_up": [
+                                    {
+                                        "key_code": "5",
+                                        "modifiers": [
+                                            "left_shift"
+                                        ]
+                                    } 
                                 ],
                                 "type": "basic"
                             },
@@ -667,7 +633,71 @@
                                         "type": "input_source_if"
                                     }
                                 ],
-                                "description": "layout independent '@'': ru",
+                                "description": "layout independent '&%'': ru",
+                                "from": {
+                                    "key_code": "e",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
+                                "to_after_key_up": [
+                                    {
+                                        "key_code": "5",
+                                        "modifiers": [
+                                            "left_shift"
+                                        ]
+                                    }
+                                ],
+                                "to_if_held_down": [
+                                    {
+                                        "hold_down_milliseconds": 50,
+                                        "key_code": "caps_lock"
+                                    },
+                                    {
+                                        "select_input_source": {
+                                            "language": "en"
+                                        }
+                                    },
+                                    {
+                                        "key_code": "7",
+                                        "modifiers": [
+                                            "left_shift"
+                                        ],
+                                        "halt": true
+                                    },
+                                    {
+                                        "hold_down_milliseconds": 150,
+                                        "key_code": "caps_lock"
+                                    },
+                                    {
+                                        "select_input_source": {
+                                            "language": "ru"
+                                        }
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+
+
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "nav_layer",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    },
+                                    {
+                                        "input_sources": [
+                                            {
+                                                "language": "en"
+                                            }
+                                        ],
+                                        "type": "input_source_if"
+                                    }
+                                ],
+                                "description": "layout independent '@$': en",
                                 "from": {
                                     "key_code": "w",
                                     "modifiers": {
@@ -676,7 +706,52 @@
                                         ]
                                     }
                                 },
-                                "to": [
+                                "to_if_held_down": [
+                                    {
+                                        "key_code": "4",
+                                        "modifiers": [
+                                            "left_shift"
+                                        ],
+                                        "repeat": false,
+                                        "halt": true
+                                    }
+                                ],
+                                "to_after_key_up": [
+                                    {
+                                        "key_code": "2",
+                                        "modifiers": [
+                                            "left_shift"
+                                        ]
+                                    } 
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "nav_layer",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    },
+                                    {
+                                        "input_sources": [
+                                            {
+                                                "language": "ru"
+                                            }
+                                        ],
+                                        "type": "input_source_if"
+                                    }
+                                ],
+                                "description": "layout independent '@$'': ru",
+                                "from": {
+                                    "key_code": "w",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
+                                "to_after_key_up": [
                                     {
                                         "hold_down_milliseconds": 50,
                                         "key_code": "caps_lock"
@@ -694,6 +769,33 @@
                                     },
                                     {
                                         "hold_down_milliseconds": 50,
+                                        "key_code": "caps_lock"
+                                    },
+                                    {
+                                        "select_input_source": {
+                                            "language": "ru"
+                                        }
+                                    }
+                                ],
+                                "to_if_held_down": [
+                                    {
+                                        "hold_down_milliseconds": 50,
+                                        "key_code": "caps_lock"
+                                    },
+                                    {
+                                        "select_input_source": {
+                                            "language": "en"
+                                        }
+                                    },
+                                    {
+                                        "key_code": "4",
+                                        "modifiers": [
+                                            "left_shift"
+                                        ],
+                                        "halt": true
+                                    },
+                                    {
+                                        "hold_down_milliseconds": 150,
                                         "key_code": "caps_lock"
                                     },
                                     {
@@ -1052,6 +1154,9 @@
                                 "to_after_key_up": [
                                     {
                                         "key_code": "equal_sign",
+                                        "modifiers": [
+                                            "left_shift"
+                                        ],
                                         "repeat": false
                                     }
                                 ],
@@ -1060,7 +1165,6 @@
                                         "halt": true,
                                         "key_code": "equal_sign",
                                         "modifiers": [
-                                            "left_shift"
                                         ],
                                         "repeat": false
                                     }
