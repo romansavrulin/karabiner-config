@@ -46,10 +46,6 @@
                                 "type": "basic"
                             },
                             {
-                                "parameters": {
-                                    "basic.simultaneous_threshold_milliseconds": 1,
-                                    "basic.to_if_held_down_threshold_milliseconds": 400
-                                },
                                 "conditions": [
                                     {
                                         "name": "nav_layer",
@@ -66,6 +62,10 @@
                                         ]
                                     }
                                 },
+                                "parameters": {
+                                    "basic.simultaneous_threshold_milliseconds": 1,
+                                    "basic.to_if_held_down_threshold_milliseconds": 250
+                                },
                                 "to_after_key_up": [
                                     {
                                         "key_code": "caps_lock",
@@ -74,9 +74,9 @@
                                 ],
                                 "to_if_held_down": [
                                     {
+                                        "halt": true,
                                         "key_code": "left_control",
-                                        "repeat": true,
-                                        "halt": true
+                                        "repeat": true
                                     }
                                 ],
                                 "type": "basic"
@@ -224,11 +224,10 @@
                                 ],
                                 "to_if_held_down": [
                                     {
+                                        "halt": true,
                                         "key_code": "comma",
-                                        "modifiers": [
-                                        ],
-                                        "repeat": false,
-                                        "halt": true
+                                        "modifiers": [],
+                                        "repeat": false
                                     }
                                 ],
                                 "type": "basic"
@@ -570,8 +569,6 @@
                                 ],
                                 "type": "basic"
                             },
-
-
                             {
                                 "conditions": [
                                     {
@@ -597,23 +594,23 @@
                                         ]
                                     }
                                 },
-                                "to_if_held_down": [
-                                    {
-                                        "key_code": "7",
-                                        "modifiers": [
-                                            "left_shift"
-                                        ],
-                                        "repeat": false,
-                                        "halt": true
-                                    }
-                                ],
                                 "to_after_key_up": [
                                     {
                                         "key_code": "5",
                                         "modifiers": [
                                             "left_shift"
                                         ]
-                                    } 
+                                    }
+                                ],
+                                "to_if_held_down": [
+                                    {
+                                        "halt": true,
+                                        "key_code": "7",
+                                        "modifiers": [
+                                            "left_shift"
+                                        ],
+                                        "repeat": false
+                                    }
                                 ],
                                 "type": "basic"
                             },
@@ -661,11 +658,11 @@
                                         }
                                     },
                                     {
+                                        "halt": true,
                                         "key_code": "7",
                                         "modifiers": [
                                             "left_shift"
-                                        ],
-                                        "halt": true
+                                        ]
                                     },
                                     {
                                         "hold_down_milliseconds": 150,
@@ -679,8 +676,6 @@
                                 ],
                                 "type": "basic"
                             },
-
-
                             {
                                 "conditions": [
                                     {
@@ -706,23 +701,23 @@
                                         ]
                                     }
                                 },
-                                "to_if_held_down": [
-                                    {
-                                        "key_code": "4",
-                                        "modifiers": [
-                                            "left_shift"
-                                        ],
-                                        "repeat": false,
-                                        "halt": true
-                                    }
-                                ],
                                 "to_after_key_up": [
                                     {
                                         "key_code": "2",
                                         "modifiers": [
                                             "left_shift"
                                         ]
-                                    } 
+                                    }
+                                ],
+                                "to_if_held_down": [
+                                    {
+                                        "halt": true,
+                                        "key_code": "4",
+                                        "modifiers": [
+                                            "left_shift"
+                                        ],
+                                        "repeat": false
+                                    }
                                 ],
                                 "type": "basic"
                             },
@@ -788,11 +783,11 @@
                                         }
                                     },
                                     {
+                                        "halt": true,
                                         "key_code": "4",
                                         "modifiers": [
                                             "left_shift"
-                                        ],
-                                        "halt": true
+                                        ]
                                     },
                                     {
                                         "hold_down_milliseconds": 150,
@@ -956,7 +951,6 @@
                                     {
                                         "key_code": "semicolon",
                                         "modifiers": [
-                                            "left_shift"
                                         ],
                                         "repeat": false
                                     }
@@ -965,6 +959,9 @@
                                     {
                                         "halt": true,
                                         "key_code": "semicolon",
+                                        "modifiers": [
+                                            "left_shift"
+                                        ],
                                         "repeat": false
                                     }
                                 ],
@@ -997,7 +994,7 @@
                                 },
                                 "to_after_key_up": [
                                     {
-                                        "key_code": "6",
+                                        "key_code": "4",
                                         "modifiers": [
                                             "left_shift"
                                         ],
@@ -1007,7 +1004,7 @@
                                 "to_if_held_down": [
                                     {
                                         "halt": true,
-                                        "key_code": "4",
+                                        "key_code": "6",
                                         "modifiers": [
                                             "left_shift"
                                         ],
@@ -1164,8 +1161,7 @@
                                     {
                                         "halt": true,
                                         "key_code": "equal_sign",
-                                        "modifiers": [
-                                        ],
+                                        "modifiers": [],
                                         "repeat": false
                                     }
                                 ],
@@ -1828,6 +1824,7 @@
                                         "type": "device_unless"
                                     }
                                 ],
+                                "description": "Swap m key to n",
                                 "from": {
                                     "key_code": "m",
                                     "modifiers": {
@@ -1852,8 +1849,7 @@
                                         "repeat": false
                                     }
                                 ],
-                                "type": "basic",
-                                "description": "Swap m key to n"
+                                "type": "basic"
                             },
                             {
                                 "conditions": [
@@ -1867,6 +1863,7 @@
                                         "type": "device_unless"
                                     }
                                 ],
+                                "description": "Swap grave key to m",
                                 "from": {
                                     "key_code": "grave_accent_and_tilde",
                                     "modifiers": {
@@ -1891,8 +1888,7 @@
                                         "repeat": false
                                     }
                                 ],
-                                "type": "basic",
-                                "description": "Swap grave key to m"
+                                "type": "basic"
                             },
                             {
                                 "conditions": [
@@ -1910,6 +1906,7 @@
                                         "value": false
                                     }
                                 ],
+                                "description": "Swap n key to b",
                                 "from": {
                                     "key_code": "n",
                                     "modifiers": {
@@ -1934,8 +1931,7 @@
                                         "repeat": false
                                     }
                                 ],
-                                "type": "basic",
-                                "description": "Swap n key to b"
+                                "type": "basic"
                             }
                         ]
                     },
