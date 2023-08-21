@@ -13,7 +13,7 @@
                     "basic.simultaneous_threshold_milliseconds": 50,
                     "basic.to_delayed_action_delay_milliseconds": 500,
                     "basic.to_if_alone_timeout_milliseconds": 1000,
-                    "basic.to_if_held_down_threshold_milliseconds": 165,
+                    "basic.to_if_held_down_threshold_milliseconds": 175,
                     "mouse_motion_to_scroll.speed": 100
                 },
                 "rules": [
@@ -217,7 +217,7 @@
                                 },
                                 "to_after_key_up": [
                                     {
-                                        "key_code": "period",
+                                        "key_code": "comma",
                                         "modifiers": [],
                                         "repeat": false
                                     }
@@ -225,7 +225,7 @@
                                 "to_if_held_down": [
                                     {
                                         "halt": true,
-                                        "key_code": "comma",
+                                        "key_code": "period",
                                         "modifiers": [],
                                         "repeat": false
                                     }
@@ -951,6 +951,7 @@
                                     {
                                         "key_code": "semicolon",
                                         "modifiers": [
+                                            "left_shift"
                                         ],
                                         "repeat": false
                                     }
@@ -959,9 +960,7 @@
                                     {
                                         "halt": true,
                                         "key_code": "semicolon",
-                                        "modifiers": [
-                                            "left_shift"
-                                        ],
+                                        "modifiers": [],
                                         "repeat": false
                                     }
                                 ],
@@ -994,7 +993,7 @@
                                 },
                                 "to_after_key_up": [
                                     {
-                                        "key_code": "4",
+                                        "key_code": "6",
                                         "modifiers": [
                                             "left_shift"
                                         ],
@@ -1004,7 +1003,7 @@
                                 "to_if_held_down": [
                                     {
                                         "halt": true,
-                                        "key_code": "6",
+                                        "key_code": "4",
                                         "modifiers": [
                                             "left_shift"
                                         ],
@@ -2776,9 +2775,58 @@
                                         ]
                                     }
                                 },
+                                "conditions": [
+                                    {
+                                        "input_sources": [
+                                            {
+                                                "language": "en"
+                                            }
+                                        ],
+                                        "type": "input_source_if"
+                                    }
+                                ],
                                 "to_after_key_up": [
                                     {
                                         "key_code": "semicolon",
+                                        "modifiers": [
+                                            "left_shift"
+                                        ],
+                                        "repeat": false
+                                    }
+                                ],
+                                "to_if_held_down": [
+                                    {
+                                        "halt": true,
+                                        "key_code": "semicolon",
+                                        "modifiers": [],
+                                        "repeat": false
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "key_code": "semicolon",
+                                    "modifiers": {
+                                        "optional": [
+                                            "caps_lock"
+                                        ]
+                                    }
+                                },
+                                "conditions": [
+                                    {
+                                        "input_sources": [
+                                            {
+                                                "language": "ru"
+                                            }
+                                        ],
+                                        "type": "input_source_if"
+                                    }
+                                ],
+                                "to_after_key_up": [
+                                    {
+                                        "key_code": "semicolon",
+                                        "modifiers": [],
                                         "repeat": false
                                     }
                                 ],
@@ -2876,6 +2924,16 @@
                                 "type": "basic"
                             },
                             {
+                                "conditions": [
+                                    {
+                                        "input_sources": [
+                                            {
+                                                "language": "ru"
+                                            }
+                                        ],
+                                        "type": "input_source_if"
+                                    }
+                                ],
                                 "from": {
                                     "key_code": "slash",
                                     "modifiers": {
@@ -2887,7 +2945,46 @@
                                 "to_after_key_up": [
                                     {
                                         "key_code": "slash",
+                                        "repeat": false,
+                                        "modifiers": [
+                                            "left_shift"
+                                        ]
+                                    }
+                                ],
+                                "to_if_held_down": [
+                                    {
+                                        "halt": true,
+                                        "key_code": "slash",
+                                        "modifiers": [],
                                         "repeat": false
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "input_sources": [
+                                            {
+                                                "language": "en"
+                                            }
+                                        ],
+                                        "type": "input_source_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "slash",
+                                    "modifiers": {
+                                        "optional": [
+                                            "caps_lock"
+                                        ]
+                                    }
+                                },
+                                "to_after_key_up": [
+                                    {
+                                        "key_code": "slash",
+                                        "repeat": false,
+                                        "modifiers": []
                                     }
                                 ],
                                 "to_if_held_down": [
@@ -3509,7 +3606,7 @@
                     ]
                 }
             ],
-            "name": "Default profile",
+            "name": "Internal",
             "parameters": {
                 "delay_milliseconds_before_open_device": 1000
             },
