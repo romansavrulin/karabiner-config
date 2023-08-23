@@ -1012,14 +1012,25 @@
                                 ],
                                 "type": "basic"
                             },
+
+
                             {
                                 "conditions": [
                                     {
                                         "name": "nav_layer",
                                         "type": "variable_if",
                                         "value": 1
+                                    },
+                                    {
+                                        "input_sources": [
+                                            {
+                                                "language": "en"
+                                            }
+                                        ],
+                                        "type": "input_source_if"
                                     }
                                 ],
+                                "description": "Enter on 'n' key for tk44 kb",
                                 "from": {
                                     "key_code": "m",
                                     "modifiers": {
@@ -1041,6 +1052,46 @@
                                 ],
                                 "type": "basic"
                             },
+
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "nav_layer",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    },
+                                    {
+                                        "input_sources": [
+                                            {
+                                                "language": "ru"
+                                            }
+                                        ],
+                                        "type": "input_source_if"
+                                    }
+                                ],
+                                "description": "Enter on 'n' key for tk44 kb",
+                                "from": {
+                                    "key_code": "m",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
+                                "to_after_key_up": [
+                                    {
+                                        "key_code": "return_or_enter"
+                                    }
+                                ],
+                                "to_if_held_down": [
+                                    {
+                                        "key_code": "slash",
+                                        "halt": true
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+
                             {
                                 "conditions": [
                                     {
@@ -2031,6 +2082,14 @@
                                             }
                                         ],
                                         "type": "device_if"
+                                    },
+                                    {
+                                        "input_sources": [
+                                            {
+                                                "language": "en"
+                                            }
+                                        ],
+                                        "type": "input_source_if"
                                     }
                                 ],
                                 "description": "Enter on 'n' key for tk44 kb",
@@ -2050,6 +2109,53 @@
                                 "to_if_held_down": [
                                     {
                                         "key_code": "period",
+                                        "halt": true
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "nav_layer",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    },
+                                    {
+                                        "identifiers": [
+                                            {
+                                                "product_id": 24926,
+                                                "vendor_id": 7504
+                                            }
+                                        ],
+                                        "type": "device_if"
+                                    },
+                                    {
+                                        "input_sources": [
+                                            {
+                                                "language": "ru"
+                                            }
+                                        ],
+                                        "type": "input_source_if"
+                                    }
+                                ],
+                                "description": "Enter on 'n' key for tk44 kb",
+                                "from": {
+                                    "key_code": "n",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
+                                "to_after_key_up": [
+                                    {
+                                        "key_code": "return_or_enter"
+                                    }
+                                ],
+                                "to_if_held_down": [
+                                    {
+                                        "key_code": "slash",
                                         "halt": true
                                     }
                                 ],
