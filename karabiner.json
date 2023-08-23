@@ -1041,6 +1041,134 @@
                                         "name": "nav_layer",
                                         "type": "variable_if",
                                         "value": 1
+                                    },
+                                    {
+                                        "input_sources": [
+                                            {
+                                                "language": "en"
+                                            }
+                                        ],
+                                        "type": "input_source_if"
+                                    }
+                                ],
+                                "description": "layout independent '#^': en",
+                                "from": {
+                                    "key_code": "c",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
+                                "to_after_key_up": [
+                                    {
+                                        "key_code": "3",
+                                        "modifiers": [
+                                            "left_shift"
+                                        ],
+                                        "repeat": false
+                                    }
+                                ],
+                                "to_if_held_down": [
+                                    {
+                                        "halt": true,
+                                        "key_code": "6",
+                                        "modifiers": [
+                                            "left_shift"
+                                        ],
+                                        "repeat": false
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "nav_layer",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    },
+                                    {
+                                        "input_sources": [
+                                            {
+                                                "language": "ru"
+                                            }
+                                        ],
+                                        "type": "input_source_if"
+                                    }
+                                ],
+                                "description": "layout independent '#^': ru",
+                                "from": {
+                                    "key_code": "c",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
+                                "to_after_key_up": [
+                                    {
+                                        "hold_down_milliseconds": 50,
+                                        "key_code": "caps_lock"
+                                    },
+                                    {
+                                        "select_input_source": {
+                                            "language": "en"
+                                        }
+                                    },
+                                    {
+                                        "key_code": "3",
+                                        "modifiers": [
+                                            "left_shift"
+                                        ],
+                                        "repeat": false
+                                    },
+                                    {
+                                        "hold_down_milliseconds": 50,
+                                        "key_code": "caps_lock"
+                                    },
+                                    {
+                                        "select_input_source": {
+                                            "language": "ru"
+                                        }
+                                    }
+                                ],
+                                "to_if_held_down": [
+                                    {
+                                        "hold_down_milliseconds": 50,
+                                        "key_code": "caps_lock"
+                                    },
+                                    {
+                                        "select_input_source": {
+                                            "language": "en"
+                                        }
+                                    },
+                                    {
+                                        "halt": true,
+                                        "key_code": "6",
+                                        "modifiers": [
+                                            "left_shift"
+                                        ],
+                                        "repeat": false
+                                    },
+                                    {
+                                        "hold_down_milliseconds": 50,
+                                        "key_code": "caps_lock"
+                                    },
+                                    {
+                                        "select_input_source": {
+                                            "language": "ru"
+                                        }
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "nav_layer",
+                                        "type": "variable_if",
+                                        "value": 1
                                     }
                                 ],
                                 "description": "layout independent '-_': en/ru",
