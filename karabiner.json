@@ -3453,6 +3453,7 @@
                                         "type": "input_source_if"
                                     }
                                 ],
+                                "description": "Swap comma and period for RU",
                                 "from": {
                                     "key_code": "slash",
                                     "modifiers": {
@@ -3491,6 +3492,7 @@
                                         "type": "input_source_if"
                                     }
                                 ],
+                                "description": "Swap /? to ., for en",
                                 "from": {
                                     "key_code": "slash",
                                     "modifiers": {
@@ -3501,7 +3503,7 @@
                                 },
                                 "to_after_key_up": [
                                     {
-                                        "key_code": "slash",
+                                        "key_code": "comma",
                                         "repeat": false,
                                         "modifiers": []
                                     }
@@ -3509,10 +3511,8 @@
                                 "to_if_held_down": [
                                     {
                                         "halt": true,
-                                        "key_code": "slash",
-                                        "modifiers": [
-                                            "left_shift"
-                                        ],
+                                        "key_code": "period",
+                                        "modifiers": [],
                                         "repeat": false
                                     }
                                 ],
