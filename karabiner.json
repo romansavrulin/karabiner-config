@@ -1097,6 +1097,16 @@
                                 },
                                 "to_after_key_up": [
                                     {
+                                        "halt": true,
+                                        "key_code": "2",
+                                        "modifiers": [
+                                            "left_shift"
+                                        ],
+                                        "repeat": false
+                                    }
+                                ],
+                                "to_if_held_down": [
+                                    {
                                         "hold_down_milliseconds": 50,
                                         "key_code": "caps_lock"
                                     },
@@ -1116,16 +1126,6 @@
                                         "select_input_source": {
                                             "language": "ru"
                                         }
-                                    }
-                                ],
-                                "to_if_held_down": [
-                                    {
-                                        "halt": true,
-                                        "key_code": "2",
-                                        "modifiers": [
-                                            "left_shift"
-                                        ],
-                                        "repeat": false
                                     }
                                 ],
                                 "type": "basic"
@@ -2854,6 +2854,9 @@
                                 "to_after_key_up": [
                                     {
                                         "key_code": "quote",
+                                        "modifiers": [
+                                            "left_shift"
+                                        ],
                                         "repeat": false
                                     }
                                 ],
@@ -2861,9 +2864,7 @@
                                     {
                                         "halt": true,
                                         "key_code": "quote",
-                                        "modifiers": [
-                                            "left_shift"
-                                        ],
+                                        "modifiers": [],
                                         "repeat": false
                                     }
                                 ],
