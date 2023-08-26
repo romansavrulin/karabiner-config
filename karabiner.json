@@ -1282,7 +1282,6 @@
                                 },
                                 "to_after_key_up": [
                                     {
-                                        "halt": true,
                                         "key_code": "2",
                                         "modifiers": [
                                             "left_shift"
@@ -1301,7 +1300,8 @@
                                         }
                                     },
                                     {
-                                        "key_code": "quote"
+                                        "key_code": "quote",
+                                        "halt": true
                                     },
                                     {
                                         "hold_down_milliseconds": 50,
