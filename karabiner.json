@@ -230,10 +230,34 @@
                                 ],
                                 "to_if_held_down": [
                                     {
+                                        "hold_down_milliseconds": 100,
+                                        "key_code": "caps_lock"
+                                    },
+                                    {
+                                        "select_input_source": {
+                                            "language": "en"
+                                        }
+                                    },
+                                    {
                                         "halt": true,
                                         "key_code": "backslash",
-                                        "modifiers": [],
-                                        "repeat": false
+                                        "modifiers": [
+                                            "left_shift"
+                                        ]
+                                    },
+                                    {
+                                        "hold_down_milliseconds": 170,
+                                        "key_code": "caps_lock"
+                                    },
+                                    {
+                                        "select_input_source": {
+                                            "language": "ru"
+                                        }
+                                    },
+                                    {
+                                        "select_input_source": {
+                                            "language": "ru"
+                                        }
                                     }
                                 ],
                                 "type": "basic"
@@ -273,7 +297,9 @@
                                     {
                                         "halt": true,
                                         "key_code": "backslash",
-                                        "modifiers": [],
+                                        "modifiers": [
+                                            "left_shift"
+                                        ],
                                         "repeat": false
                                     }
                                 ],
@@ -1928,7 +1954,7 @@
                                         "type": "device_unless"
                                     }
                                 ],
-                                "description": "Asterisk '*|' on apple kb: en",
+                                "description": "Asterisk '*\\' on apple kb: en",
                                 "from": {
                                     "key_code": "n",
                                     "modifiers": {
@@ -1949,7 +1975,6 @@
                                     {
                                         "key_code": "backslash",
                                         "modifiers": [
-                                            "left_shift"
                                         ],
                                         "halt": true
                                     }
@@ -1981,7 +2006,7 @@
                                         "type": "device_unless"
                                     }
                                 ],
-                                "description": "Asterisk '*|' on apple kb: ru",
+                                "description": "Asterisk '*\\' on apple kb: ru",
                                 "from": {
                                     "key_code": "n",
                                     "modifiers": {
@@ -2000,29 +2025,10 @@
                                 ],
                                 "to_if_held_down": [
                                     {
-                                        "hold_down_milliseconds": 100,
-                                        "key_code": "caps_lock"
-                                    },
-                                    {
-                                        "select_input_source": {
-                                            "language": "en"
-                                        }
-                                    },
-                                    {
                                         "key_code": "backslash",
                                         "modifiers": [
-                                            "left_shift"
                                         ],
                                         "halt": true
-                                    },
-                                    {
-                                        "hold_down_milliseconds": 100,
-                                        "key_code": "caps_lock"
-                                    },
-                                    {
-                                        "select_input_source": {
-                                            "language": "ru"
-                                        }
                                     }
                                 ],
                                 "type": "basic"
@@ -2041,18 +2047,9 @@
                                             }
                                         ],
                                         "type": "input_source_if"
-                                    },
-                                    {
-                                        "identifiers": [
-                                            {
-                                                "product_id": 24926,
-                                                "vendor_id": 7504
-                                            }
-                                        ],
-                                        "type": "device_if"
                                     }
                                 ],
-                                "description": "Asterisk '*|' on tk44 kb: en",
+                                "description": "Asterisk '*\\' on B key: en",
                                 "from": {
                                     "key_code": "b",
                                     "modifiers": {
@@ -2073,7 +2070,6 @@
                                     {
                                         "key_code": "backslash",
                                         "modifiers": [
-                                            "left_shift"
                                         ],
                                         "halt": true
                                     }
@@ -2094,18 +2090,9 @@
                                             }
                                         ],
                                         "type": "input_source_if"
-                                    },
-                                    {
-                                        "identifiers": [
-                                            {
-                                                "product_id": 24926,
-                                                "vendor_id": 7504
-                                            }
-                                        ],
-                                        "type": "device_if"
                                     }
                                 ],
-                                "description": "Asterisk '*|' on tk44 kb: ru",
+                                "description": "Asterisk '*\\' on B key: ru",
                                 "from": {
                                     "key_code": "b",
                                     "modifiers": {
@@ -2124,29 +2111,10 @@
                                 ],
                                 "to_if_held_down": [
                                     {
-                                        "hold_down_milliseconds": 100,
-                                        "key_code": "caps_lock"
-                                    },
-                                    {
-                                        "select_input_source": {
-                                            "language": "en"
-                                        }
-                                    },
-                                    {
                                         "key_code": "backslash",
                                         "modifiers": [
-                                            "left_shift"
                                         ],
                                         "halt": true
-                                    },
-                                    {
-                                        "hold_down_milliseconds": 100,
-                                        "key_code": "caps_lock"
-                                    },
-                                    {
-                                        "select_input_source": {
-                                            "language": "ru"
-                                        }
                                     }
                                 ],
                                 "type": "basic"
@@ -2176,7 +2144,7 @@
                                         "type": "input_source_if"
                                     }
                                 ],
-                                "description": "Enter on 'n' key for tk44 kb",
+                                "description": "Enter/period on 'n' key for tk44 kb",
                                 "from": {
                                     "key_code": "n",
                                     "modifiers": {
@@ -2223,7 +2191,7 @@
                                         "type": "input_source_if"
                                     }
                                 ],
-                                "description": "Enter on 'n' key for tk44 kb",
+                                "description": "Enter/period on 'n' key for tk44 kb",
                                 "from": {
                                     "key_code": "n",
                                     "modifiers": {
@@ -4050,6 +4018,9 @@
                                 "to_after_key_up": [
                                     {
                                         "key_code": "equal_sign",
+                                        "modifiers": [
+                                            "left_shift"
+                                        ],
                                         "repeat": false
                                     }
                                 ],
@@ -4058,7 +4029,6 @@
                                         "halt": true,
                                         "key_code": "equal_sign",
                                         "modifiers": [
-                                            "left_shift"
                                         ],
                                         "repeat": false
                                     }
