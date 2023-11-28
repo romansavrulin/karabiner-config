@@ -53,7 +53,7 @@
                                         "value": 0
                                     }
                                 ],
-                                "description": "caps as ctrl mod",
+                                "description": "caps as shift mod",
                                 "from": {
                                     "key_code": "caps_lock",
                                     "modifiers": {
@@ -75,6 +75,35 @@
                                 "to_if_held_down": [
                                     {
                                         "halt": true,
+                                        "key_code": "left_shift",
+                                        "repeat": true
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "nav_layer",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    }
+                                ],
+                                "description": "shift as ctrl mod",
+                                "from": {
+                                    "key_code": "left_shift",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
+                                "parameters": {
+                                    "basic.simultaneous_threshold_milliseconds": 1,
+                                    "basic.to_if_held_down_threshold_milliseconds": 250
+                                },
+                                "to": [
+                                    {
                                         "key_code": "left_control",
                                         "repeat": true
                                     }
@@ -411,6 +440,30 @@
                                 "to_if_alone": [
                                     {
                                         "key_code": "spacebar",
+                                        "repeat": false
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "nav_layer",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "tab",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "escape",
                                         "repeat": false
                                     }
                                 ],
@@ -1156,8 +1209,6 @@
                                 ],
                                 "type": "basic"
                             },
-
-
                             {
                                 "conditions": [
                                     {
@@ -1190,13 +1241,12 @@
                                 ],
                                 "to_if_held_down": [
                                     {
-                                        "key_code": "period",
-                                        "halt": true
+                                        "halt": true,
+                                        "key_code": "period"
                                     }
                                 ],
                                 "type": "basic"
                             },
-
                             {
                                 "conditions": [
                                     {
@@ -1229,13 +1279,12 @@
                                 ],
                                 "to_if_held_down": [
                                     {
-                                        "key_code": "slash",
-                                        "halt": true
+                                        "halt": true,
+                                        "key_code": "slash"
                                     }
                                 ],
                                 "type": "basic"
                             },
-
                             {
                                 "conditions": [
                                     {
@@ -1444,8 +1493,8 @@
                                         }
                                     },
                                     {
-                                        "key_code": "quote",
-                                        "halt": true
+                                        "halt": true,
+                                        "key_code": "quote"
                                     },
                                     {
                                         "hold_down_milliseconds": 50,
@@ -2007,10 +2056,9 @@
                                 ],
                                 "to_if_held_down": [
                                     {
+                                        "halt": true,
                                         "key_code": "backslash",
-                                        "modifiers": [
-                                        ],
-                                        "halt": true
+                                        "modifiers": []
                                     }
                                 ],
                                 "type": "basic"
@@ -2059,10 +2107,9 @@
                                 ],
                                 "to_if_held_down": [
                                     {
+                                        "halt": true,
                                         "key_code": "backslash",
-                                        "modifiers": [
-                                        ],
-                                        "halt": true
+                                        "modifiers": []
                                     }
                                 ],
                                 "type": "basic"
@@ -2102,10 +2149,9 @@
                                 ],
                                 "to_if_held_down": [
                                     {
+                                        "halt": true,
                                         "key_code": "backslash",
-                                        "modifiers": [
-                                        ],
-                                        "halt": true
+                                        "modifiers": []
                                     }
                                 ],
                                 "type": "basic"
@@ -2145,10 +2191,9 @@
                                 ],
                                 "to_if_held_down": [
                                     {
+                                        "halt": true,
                                         "key_code": "backslash",
-                                        "modifiers": [
-                                        ],
-                                        "halt": true
+                                        "modifiers": []
                                     }
                                 ],
                                 "type": "basic"
@@ -2194,8 +2239,8 @@
                                 ],
                                 "to_if_held_down": [
                                     {
-                                        "key_code": "period",
-                                        "halt": true
+                                        "halt": true,
+                                        "key_code": "period"
                                     }
                                 ],
                                 "type": "basic"
@@ -2241,8 +2286,8 @@
                                 ],
                                 "to_if_held_down": [
                                     {
-                                        "key_code": "slash",
-                                        "halt": true
+                                        "halt": true,
+                                        "key_code": "slash"
                                     }
                                 ],
                                 "type": "basic"
@@ -3276,14 +3321,6 @@
                                 "type": "basic"
                             },
                             {
-                                "from": {
-                                    "key_code": "semicolon",
-                                    "modifiers": {
-                                        "optional": [
-                                            "caps_lock"
-                                        ]
-                                    }
-                                },
                                 "conditions": [
                                     {
                                         "input_sources": [
@@ -3294,6 +3331,14 @@
                                         "type": "input_source_if"
                                     }
                                 ],
+                                "from": {
+                                    "key_code": "semicolon",
+                                    "modifiers": {
+                                        "optional": [
+                                            "caps_lock"
+                                        ]
+                                    }
+                                },
                                 "to_after_key_up": [
                                     {
                                         "key_code": "semicolon",
@@ -3314,14 +3359,6 @@
                                 "type": "basic"
                             },
                             {
-                                "from": {
-                                    "key_code": "semicolon",
-                                    "modifiers": {
-                                        "optional": [
-                                            "caps_lock"
-                                        ]
-                                    }
-                                },
                                 "conditions": [
                                     {
                                         "input_sources": [
@@ -3332,6 +3369,14 @@
                                         "type": "input_source_if"
                                     }
                                 ],
+                                "from": {
+                                    "key_code": "semicolon",
+                                    "modifiers": {
+                                        "optional": [
+                                            "caps_lock"
+                                        ]
+                                    }
+                                },
                                 "to_after_key_up": [
                                     {
                                         "key_code": "semicolon",
@@ -3551,10 +3596,10 @@
                                 "to_after_key_up": [
                                     {
                                         "key_code": "slash",
-                                        "repeat": false,
                                         "modifiers": [
                                             "left_shift"
-                                        ]
+                                        ],
+                                        "repeat": false
                                     }
                                 ],
                                 "to_if_held_down": [
@@ -3590,8 +3635,8 @@
                                 "to_after_key_up": [
                                     {
                                         "key_code": "comma",
-                                        "repeat": false,
-                                        "modifiers": []
+                                        "modifiers": [],
+                                        "repeat": false
                                     }
                                 ],
                                 "to_if_held_down": [
@@ -4062,8 +4107,7 @@
                                     {
                                         "halt": true,
                                         "key_code": "equal_sign",
-                                        "modifiers": [
-                                        ],
+                                        "modifiers": [],
                                         "repeat": false
                                     }
                                 ],
