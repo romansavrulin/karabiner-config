@@ -13,7 +13,7 @@
                     "basic.simultaneous_threshold_milliseconds": 50,
                     "basic.to_delayed_action_delay_milliseconds": 500,
                     "basic.to_if_alone_timeout_milliseconds": 1000,
-                    "basic.to_if_held_down_threshold_milliseconds": 130,
+                    "basic.to_if_held_down_threshold_milliseconds": 135,
                     "mouse_motion_to_scroll.speed": 100
                 },
                 "rules": [
@@ -185,9 +185,7 @@
                                         ]
                                     }
                                 },
-                                "parameters": {
-                                    "basic.to_if_held_down_threshold_milliseconds": 150
-                                },
+                                "parameters": {},
                                 "to": [
                                     {
                                         "key_code": "left_control",
@@ -2925,9 +2923,7 @@
                                         ]
                                     }
                                 },
-                                "parameters": {
-                                    "basic.to_if_held_down_threshold_milliseconds": 150
-                                },
+                                "parameters": {},
                                 "to_after_key_up": [
                                     {
                                         "key_code": "d",
@@ -2955,9 +2951,7 @@
                                         ]
                                     }
                                 },
-                                "parameters": {
-                                    "basic.to_if_held_down_threshold_milliseconds": 150
-                                },
+                                "parameters": {},
                                 "to_after_key_up": [
                                     {
                                         "key_code": "f",
