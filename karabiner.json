@@ -752,7 +752,7 @@
                                 ],
                                 "type": "basic"
                             },
-                            {   
+                            {
                                 "conditions": [
                                     {
                                         "name": "nav_layer",
@@ -1625,17 +1625,9 @@
                                         "name": "nav_layer",
                                         "type": "variable_if",
                                         "value": 1
-                                    },
-                                    {
-                                        "input_sources": [
-                                            {
-                                                "language": "en"
-                                            }
-                                        ],
-                                        "type": "input_source_if"
                                     }
                                 ],
-                                "description": "Enter on 'n' key for zmk kb",
+                                "description": "Enter on 'n' key for embedded kb",
                                 "from": {
                                     "key_code": "m",
                                     "modifiers": {
@@ -1644,53 +1636,10 @@
                                         ]
                                     }
                                 },
-                                "to_after_key_up": [
+                                "to": [
                                     {
-                                        "key_code": "return_or_enter"
-                                    }
-                                ],
-                                "to_if_held_down": [
-                                    {
-                                        "halt": true,
-                                        "key_code": "period"
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "nav_layer",
-                                        "type": "variable_if",
-                                        "value": 1
-                                    },
-                                    {
-                                        "input_sources": [
-                                            {
-                                                "language": "ru"
-                                            }
-                                        ],
-                                        "type": "input_source_if"
-                                    }
-                                ],
-                                "description": "Enter on 'n' key for tk44 kb",
-                                "from": {
-                                    "key_code": "m",
-                                    "modifiers": {
-                                        "optional": [
-                                            "any"
-                                        ]
-                                    }
-                                },
-                                "to_after_key_up": [
-                                    {
-                                        "key_code": "return_or_enter"
-                                    }
-                                ],
-                                "to_if_held_down": [
-                                    {
-                                        "halt": true,
-                                        "key_code": "slash"
+                                        "key_code": "return_or_enter",
+                                        "repeat": false
                                     }
                                 ],
                                 "type": "basic"
@@ -2623,17 +2572,9 @@
                                             }
                                         ],
                                         "type": "device_if"
-                                    },
-                                    {
-                                        "input_sources": [
-                                            {
-                                                "language": "en"
-                                            }
-                                        ],
-                                        "type": "input_source_if"
                                     }
                                 ],
-                                "description": "Enter/period on 'n' key for tk44 kb",
+                                "description": "Enter on 'n' key for tk44 kb",
                                 "from": {
                                     "key_code": "n",
                                     "modifiers": {
@@ -2642,62 +2583,10 @@
                                         ]
                                     }
                                 },
-                                "to_after_key_up": [
+                                "to": [
                                     {
-                                        "key_code": "return_or_enter"
-                                    }
-                                ],
-                                "to_if_held_down": [
-                                    {
-                                        "halt": true,
-                                        "key_code": "period"
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "nav_layer",
-                                        "type": "variable_if",
-                                        "value": 1
-                                    },
-                                    {
-                                        "identifiers": [
-                                            {
-                                                "product_id": 24926,
-                                                "vendor_id": 7504
-                                            }
-                                        ],
-                                        "type": "device_if"
-                                    },
-                                    {
-                                        "input_sources": [
-                                            {
-                                                "language": "ru"
-                                            }
-                                        ],
-                                        "type": "input_source_if"
-                                    }
-                                ],
-                                "description": "Enter/period on 'n' key for tk44 kb",
-                                "from": {
-                                    "key_code": "n",
-                                    "modifiers": {
-                                        "optional": [
-                                            "any"
-                                        ]
-                                    }
-                                },
-                                "to_after_key_up": [
-                                    {
-                                        "key_code": "return_or_enter"
-                                    }
-                                ],
-                                "to_if_held_down": [
-                                    {
-                                        "halt": true,
-                                        "key_code": "slash"
+                                        "key_code": "return_or_enter",
+                                        "repeat": false
                                     }
                                 ],
                                 "type": "basic"
