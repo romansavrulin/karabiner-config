@@ -1,8 +1,9 @@
 {
+    "global": { "show_in_menu_bar": false },
     "profiles": [
         {
             "complex_modifications": {
-                "parameters": { "basic.to_if_held_down_threshold_milliseconds": 110 },
+                "parameters": { "basic.to_if_held_down_threshold_milliseconds": 125 },
                 "rules": [
                     {
                         "description": "F modifiers",
@@ -438,6 +439,51 @@
                         ]
                     },
                     {
+                        "description": "Vol control",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "nav_layer",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "description": "Vol Up",
+                                "from": {
+                                    "key_code": "e",
+                                    "modifiers": { "mandatory": ["left_shift"] }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "volume_decrement"
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "nav_layer",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "description": "Vol Down",
+                                "from": {
+                                    "key_code": "r",
+                                    "modifiers": { "mandatory": ["left_shift"] }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "volume_increment"
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
                         "description": "Language switch",
                         "manipulators": [
                             {
@@ -474,7 +520,7 @@
                                         "value": 1
                                     }
                                 ],
-                                "description": "Toggle language with PuntoSwitcher",
+                                "description": "Toggle register with PuntoSwitcher",
                                 "from": {
                                     "key_code": "y",
                                     "modifiers": { "optional": ["any"] }
