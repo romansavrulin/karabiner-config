@@ -100,7 +100,7 @@
                                 "parameters": { "basic.to_if_held_down_threshold_milliseconds": 135 },
                                 "to_after_key_up": [
                                     {
-                                        "key_code": "f5",
+                                        "consumer_key_code": "dictation",
                                         "repeat": false
                                     }
                                 ],
@@ -313,37 +313,6 @@
                                     { "key_code": "vk_none" }
                                 ],
                                 "to_if_held_down": [{ "key_code": "left_shift" }],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "nav_layer",
-                                        "type": "variable_if",
-                                        "value": 0
-                                    },
-                                    {
-                                        "identifiers": [
-                                            {
-                                                "product_id": 24926,
-                                                "vendor_id": 7504
-                                            }
-                                        ],
-                                        "type": "device_unless"
-                                    }
-                                ],
-                                "description": "shift as ctrl mod for basic keyboards",
-                                "from": {
-                                    "key_code": "left_shift",
-                                    "modifiers": { "optional": ["any"] }
-                                },
-                                "parameters": { "basic.simultaneous_threshold_milliseconds": 1 },
-                                "to": [
-                                    {
-                                        "key_code": "left_control",
-                                        "repeat": true
-                                    }
-                                ],
                                 "type": "basic"
                             },
                             {
@@ -2300,6 +2269,35 @@
                                     {
                                         "halt": true,
                                         "key_code": "close_bracket",
+                                        "modifiers": ["left_shift"],
+                                        "repeat": false
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "nav_layer",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    }
+                                ],
+                                "description": "Left shift as m for ansi keyboard",
+                                "from": {
+                                    "key_code": "left_shift",
+                                    "modifiers": { "optional": ["left_command", "left_control", "left_alt", "left_shift"] }
+                                },
+                                "to_after_key_up": [
+                                    {
+                                        "key_code": "m",
+                                        "repeat": false
+                                    }
+                                ],
+                                "to_if_held_down": [
+                                    {
+                                        "halt": true,
+                                        "key_code": "m",
                                         "modifiers": ["left_shift"],
                                         "repeat": false
                                     }
