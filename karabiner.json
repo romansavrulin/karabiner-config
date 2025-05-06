@@ -497,6 +497,67 @@
                         ]
                     },
                     {
+                        "description": "Yo",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "nav_layer",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "description": "yo",
+                                "from": {
+                                    "key_code": "t",
+                                    "modifiers": { "mandatory": ["left_shift"] }
+                                },
+                                "to_if_held_down": [
+                                    {
+                                        "key_code": "grave_accent_and_tilde",
+                                        "modifiers": [ "left_shift" ],
+                                        "repeat": false
+                                    }
+                                ],
+                                "to_after_key_up": [
+                                    {
+                                        "key_code": "grave_accent_and_tilde",
+                                        "modifiers": [ ],
+                                        "repeat": false,
+                                        "halt": true
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "dictation",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "nav_layer",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "description": "dictation",
+                                "from": {
+                                    "key_code": "g",
+                                    "modifiers": { "mandatory": ["left_shift"] }
+                                },
+                                "to": [
+                                    {
+                                        "consumer_key_code": "dictation",
+                                        "repeat": false
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
                         "description": "Num layer",
                         "manipulators": [
                             {
