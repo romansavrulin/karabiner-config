@@ -516,6 +516,7 @@
                                     {
                                         "key_code": "grave_accent_and_tilde",
                                         "modifiers": [ "left_shift" ],
+                                        "halt": true,
                                         "repeat": false
                                     }
                                 ],
@@ -523,8 +524,7 @@
                                     {
                                         "key_code": "grave_accent_and_tilde",
                                         "modifiers": [ ],
-                                        "repeat": false,
-                                        "halt": true
+                                        "repeat": false
                                     }
                                 ],
                                 "type": "basic"
