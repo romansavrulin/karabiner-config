@@ -297,15 +297,15 @@
                                 "description": "cmd caps for caps",
                                 "from": {
                                     "key_code": "caps_lock",
-                                    "modifiers": { 
-                                        "mandatory": ["left_command"],
+                                    "modifiers": {
+                                        "mandatory": ["right_command"],
                                         "optional": ["caps_lock"]
                                     }
                                 },
                                 "to": [
-                                    { 
+                                    {
                                         "key_code": "caps_lock",
-                                        "modifiers": ["left_command"]
+                                        "modifiers": ["right_command"]
                                     }
                                 ],
                                 "type": "basic"
@@ -325,23 +325,22 @@
                                 },
                                 "parameters": {
                                     "basic.simultaneous_threshold_milliseconds": 1,
-                                    "basic.to_if_alone_timeout_milliseconds": 150,
-                                    "basic.to_if_held_down_threshold_milliseconds": 110
+                                    "basic.to_if_alone_timeout_milliseconds": 200,
+                                    "basic.to_if_held_down_threshold_milliseconds": 200
                                 },
                                 "to": [{ "key_code": "left_shift" }],
                                 "to_if_alone": [
                                     {
-                                        "key_code": "vk_none",
-                                        "hold_down_milliseconds": 50
+                                        "hold_down_milliseconds": 50,
+                                        "key_code": "vk_none"
                                     },
                                     {
-                                        "key_code": "spacebar",
-                                        "modifiers": ["left_command"],
-                                        "hold_down_milliseconds": 50
+                                        "hold_down_milliseconds": 50,
+                                        "key_code": "caps_lock"
                                     },
                                     {
-                                        "key_code": "vk_none",
-                                        "hold_down_milliseconds": 50
+                                        "hold_down_milliseconds": 50,
+                                        "key_code": "vk_none"
                                     }
                                 ],
                                 "to_if_held_down": [{ "key_code": "left_shift" }],
@@ -863,7 +862,6 @@
                                 "type": "basic"
                             },
                             {
-                                "description": "Lang independent pipe |",
                                 "conditions": [
                                     {
                                         "input_sources": [{ "language": "ru" }],
@@ -875,6 +873,7 @@
                                         "value": 1
                                     }
                                 ],
+                                "description": "Lang independent pipe |",
                                 "from": {
                                     "key_code": "v",
                                     "modifiers": { "optional": ["caps_lock"] }
@@ -889,17 +888,16 @@
                                 ],
                                 "to_if_held_down": [
                                     {
-                                        "key_code": "vk_none",
-                                        "hold_down_milliseconds": 50
+                                        "hold_down_milliseconds": 50,
+                                        "key_code": "vk_none"
                                     },
                                     {
-                                        "key_code": "spacebar",
-                                        "modifiers": ["left_command"],
-                                        "hold_down_milliseconds": 50
+                                        "hold_down_milliseconds": 50,
+                                        "key_code": "caps_lock"
                                     },
                                     {
-                                        "key_code": "vk_none",
-                                        "hold_down_milliseconds": 50
+                                        "hold_down_milliseconds": 50,
+                                        "key_code": "vk_none"
                                     },
                                     {
                                         "halt": true,
@@ -907,17 +905,16 @@
                                         "modifiers": ["left_shift"]
                                     },
                                     {
-                                        "key_code": "vk_none",
-                                        "hold_down_milliseconds": 50
+                                        "hold_down_milliseconds": 50,
+                                        "key_code": "vk_none"
                                     },
                                     {
-                                        "key_code": "spacebar",
-                                        "modifiers": ["left_command"],
-                                        "hold_down_milliseconds": 50
+                                        "hold_down_milliseconds": 110,
+                                        "key_code": "caps_lock"
                                     },
                                     {
-                                        "key_code": "vk_none",
-                                        "hold_down_milliseconds": 50
+                                        "hold_down_milliseconds": 50,
+                                        "key_code": "vk_none"
                                     }
                                 ],
                                 "type": "basic"
@@ -1391,17 +1388,16 @@
                                 ],
                                 "to_if_held_down": [
                                     {
-                                        "key_code": "vk_none",
-                                        "hold_down_milliseconds": 50
+                                        "hold_down_milliseconds": 50,
+                                        "key_code": "vk_none"
                                     },
                                     {
-                                        "key_code": "spacebar",
-                                        "modifiers": ["left_command"],
-                                        "hold_down_milliseconds": 50
+                                        "hold_down_milliseconds": 50,
+                                        "key_code": "caps_lock"
                                     },
                                     {
-                                        "key_code": "vk_none",
-                                        "hold_down_milliseconds": 50
+                                        "hold_down_milliseconds": 50,
+                                        "key_code": "vk_none"
                                     },
                                     {
                                         "halt": true,
@@ -1409,17 +1405,16 @@
                                         "modifiers": ["left_shift"]
                                     },
                                     {
-                                        "key_code": "vk_none",
-                                        "hold_down_milliseconds": 50
+                                        "hold_down_milliseconds": 50,
+                                        "key_code": "vk_none"
                                     },
                                     {
-                                        "key_code": "spacebar",
-                                        "modifiers": ["left_command"],
-                                        "hold_down_milliseconds": 50
+                                        "hold_down_milliseconds": 110,
+                                        "key_code": "caps_lock"
                                     },
                                     {
-                                        "key_code": "vk_none",
-                                        "hold_down_milliseconds": 50
+                                        "hold_down_milliseconds": 50,
+                                        "key_code": "vk_none"
                                     }
                                 ],
                                 "type": "basic"
@@ -1476,49 +1471,46 @@
                                 },
                                 "to_after_key_up": [
                                     {
-                                        "key_code": "vk_none",
-                                        "hold_down_milliseconds": 50
+                                        "hold_down_milliseconds": 50,
+                                        "key_code": "vk_none"
                                     },
                                     {
-                                        "key_code": "spacebar",
-                                        "modifiers": ["left_command"],
-                                        "hold_down_milliseconds": 50
+                                        "hold_down_milliseconds": 50,
+                                        "key_code": "caps_lock"
                                     },
                                     {
-                                        "key_code": "vk_none",
-                                        "hold_down_milliseconds": 50
+                                        "hold_down_milliseconds": 50,
+                                        "key_code": "vk_none"
                                     },
                                     {
                                         "key_code": "2",
                                         "modifiers": ["left_shift"]
                                     },
                                     {
-                                        "key_code": "vk_none",
-                                        "hold_down_milliseconds": 50
+                                        "hold_down_milliseconds": 50,
+                                        "key_code": "vk_none"
                                     },
                                     {
-                                        "key_code": "spacebar",
-                                        "modifiers": ["left_command"],
-                                        "hold_down_milliseconds": 50
+                                        "hold_down_milliseconds": 110,
+                                        "key_code": "caps_lock"
                                     },
                                     {
-                                        "key_code": "vk_none",
-                                        "hold_down_milliseconds": 50
+                                        "hold_down_milliseconds": 50,
+                                        "key_code": "vk_none"
                                     }
                                 ],
                                 "to_if_held_down": [
                                     {
-                                        "key_code": "vk_none",
-                                        "hold_down_milliseconds": 50
+                                        "hold_down_milliseconds": 50,
+                                        "key_code": "vk_none"
                                     },
                                     {
-                                        "key_code": "spacebar",
-                                        "modifiers": ["left_command"],
-                                        "hold_down_milliseconds": 50
+                                        "hold_down_milliseconds": 50,
+                                        "key_code": "caps_lock"
                                     },
                                     {
-                                        "key_code": "vk_none",
-                                        "hold_down_milliseconds": 50
+                                        "hold_down_milliseconds": 50,
+                                        "key_code": "vk_none"
                                     },
                                     {
                                         "halt": true,
@@ -1526,17 +1518,16 @@
                                         "modifiers": ["left_shift"]
                                     },
                                     {
-                                        "key_code": "vk_none",
-                                        "hold_down_milliseconds": 50
+                                        "hold_down_milliseconds": 50,
+                                        "key_code": "vk_none"
                                     },
                                     {
-                                        "key_code": "spacebar",
-                                        "modifiers": ["left_command"],
-                                        "hold_down_milliseconds": 50
+                                        "hold_down_milliseconds": 110,
+                                        "key_code": "caps_lock"
                                     },
                                     {
-                                        "key_code": "vk_none",
-                                        "hold_down_milliseconds": 50
+                                        "hold_down_milliseconds": 50,
+                                        "key_code": "vk_none"
                                     }
                                 ],
                                 "type": "basic"
@@ -1560,46 +1551,43 @@
                                 },
                                 "to_after_key_up": [
                                     {
-                                        "key_code": "vk_none",
-                                        "hold_down_milliseconds": 50
+                                        "hold_down_milliseconds": 50,
+                                        "key_code": "vk_none"
                                     },
                                     {
-                                        "key_code": "spacebar",
-                                        "modifiers": ["left_command"],
-                                        "hold_down_milliseconds": 50
+                                        "hold_down_milliseconds": 50,
+                                        "key_code": "caps_lock"
                                     },
                                     {
-                                        "key_code": "vk_none",
-                                        "hold_down_milliseconds": 50
+                                        "hold_down_milliseconds": 50,
+                                        "key_code": "vk_none"
                                     },
                                     { "key_code": "grave_accent_and_tilde" },
                                     {
-                                        "key_code": "vk_none",
-                                        "hold_down_milliseconds": 50
+                                        "hold_down_milliseconds": 50,
+                                        "key_code": "vk_none"
                                     },
                                     {
-                                        "key_code": "spacebar",
-                                        "modifiers": ["left_command"],
-                                        "hold_down_milliseconds": 50
+                                        "hold_down_milliseconds": 110,
+                                        "key_code": "caps_lock"
                                     },
                                     {
-                                        "key_code": "vk_none",
-                                        "hold_down_milliseconds": 50
+                                        "hold_down_milliseconds": 50,
+                                        "key_code": "vk_none"
                                     }
                                 ],
                                 "to_if_held_down": [
                                     {
-                                        "key_code": "vk_none",
-                                        "hold_down_milliseconds": 50
+                                        "hold_down_milliseconds": 50,
+                                        "key_code": "vk_none"
                                     },
                                     {
-                                        "key_code": "spacebar",
-                                        "modifiers": ["left_command"],
-                                        "hold_down_milliseconds": 50
+                                        "hold_down_milliseconds": 50,
+                                        "key_code": "caps_lock"
                                     },
                                     {
-                                        "key_code": "vk_none",
-                                        "hold_down_milliseconds": 50
+                                        "hold_down_milliseconds": 50,
+                                        "key_code": "vk_none"
                                     },
                                     {
                                         "halt": true,
@@ -1607,17 +1595,16 @@
                                         "modifiers": ["right_shift"]
                                     },
                                     {
-                                        "key_code": "vk_none",
-                                        "hold_down_milliseconds": 50
+                                        "hold_down_milliseconds": 50,
+                                        "key_code": "vk_none"
                                     },
                                     {
-                                        "key_code": "spacebar",
-                                        "modifiers": ["left_command"],
-                                        "hold_down_milliseconds": 50
+                                        "hold_down_milliseconds": 110,
+                                        "key_code": "caps_lock"
                                     },
                                     {
-                                        "key_code": "vk_none",
-                                        "hold_down_milliseconds": 50
+                                        "hold_down_milliseconds": 50,
+                                        "key_code": "vk_none"
                                     }
                                 ],
                                 "type": "basic"
@@ -1798,17 +1785,16 @@
                                 },
                                 "to_after_key_up": [
                                     {
-                                        "key_code": "vk_none",
-                                        "hold_down_milliseconds": 50
+                                        "hold_down_milliseconds": 50,
+                                        "key_code": "vk_none"
                                     },
                                     {
-                                        "key_code": "spacebar",
-                                        "modifiers": ["left_command"],
-                                        "hold_down_milliseconds": 50
+                                        "hold_down_milliseconds": 50,
+                                        "key_code": "caps_lock"
                                     },
                                     {
-                                        "key_code": "vk_none",
-                                        "hold_down_milliseconds": 50
+                                        "hold_down_milliseconds": 50,
+                                        "key_code": "vk_none"
                                     },
                                     {
                                         "key_code": "3",
@@ -1816,32 +1802,30 @@
                                         "repeat": false
                                     },
                                     {
-                                        "key_code": "vk_none",
-                                        "hold_down_milliseconds": 50
+                                        "hold_down_milliseconds": 50,
+                                        "key_code": "vk_none"
                                     },
                                     {
-                                        "key_code": "spacebar",
-                                        "modifiers": ["left_command"],
-                                        "hold_down_milliseconds": 50
+                                        "hold_down_milliseconds": 110,
+                                        "key_code": "caps_lock"
                                     },
                                     {
-                                        "key_code": "vk_none",
-                                        "hold_down_milliseconds": 50
+                                        "hold_down_milliseconds": 50,
+                                        "key_code": "vk_none"
                                     }
                                 ],
                                 "to_if_held_down": [
                                     {
-                                        "key_code": "vk_none",
-                                        "hold_down_milliseconds": 50
+                                        "hold_down_milliseconds": 50,
+                                        "key_code": "vk_none"
                                     },
                                     {
-                                        "key_code": "spacebar",
-                                        "modifiers": ["left_command"],
-                                        "hold_down_milliseconds": 50
+                                        "hold_down_milliseconds": 50,
+                                        "key_code": "caps_lock"
                                     },
                                     {
-                                        "key_code": "vk_none",
-                                        "hold_down_milliseconds": 50
+                                        "hold_down_milliseconds": 50,
+                                        "key_code": "vk_none"
                                     },
                                     {
                                         "halt": true,
@@ -1850,17 +1834,16 @@
                                         "repeat": false
                                     },
                                     {
-                                        "key_code": "vk_none",
-                                        "hold_down_milliseconds": 50
+                                        "hold_down_milliseconds": 50,
+                                        "key_code": "vk_none"
                                     },
                                     {
-                                        "key_code": "spacebar",
-                                        "modifiers": ["left_command"],
-                                        "hold_down_milliseconds": 50
+                                        "hold_down_milliseconds": 110,
+                                        "key_code": "caps_lock"
                                     },
                                     {
-                                        "key_code": "vk_none",
-                                        "hold_down_milliseconds": 50
+                                        "hold_down_milliseconds": 50,
+                                        "key_code": "vk_none"
                                     }
                                 ],
                                 "type": "basic"
@@ -1920,34 +1903,32 @@
                                 ],
                                 "to_if_held_down": [
                                     {
-                                        "key_code": "vk_none",
-                                        "hold_down_milliseconds": 50
+                                        "hold_down_milliseconds": 50,
+                                        "key_code": "vk_none"
                                     },
                                     {
-                                        "key_code": "spacebar",
-                                        "modifiers": ["left_command"],
-                                        "hold_down_milliseconds": 50
+                                        "hold_down_milliseconds": 50,
+                                        "key_code": "caps_lock"
                                     },
                                     {
-                                        "key_code": "vk_none",
-                                        "hold_down_milliseconds": 50
+                                        "hold_down_milliseconds": 50,
+                                        "key_code": "vk_none"
                                     },
                                     {
                                         "halt": true,
                                         "key_code": "quote"
                                     },
                                     {
-                                        "key_code": "vk_none",
-                                        "hold_down_milliseconds": 50
+                                        "hold_down_milliseconds": 50,
+                                        "key_code": "vk_none"
                                     },
                                     {
-                                        "key_code": "spacebar",
-                                        "modifiers": ["left_command"],
-                                        "hold_down_milliseconds": 50
+                                        "hold_down_milliseconds": 110,
+                                        "key_code": "caps_lock"
                                     },
                                     {
-                                        "key_code": "vk_none",
-                                        "hold_down_milliseconds": 50
+                                        "hold_down_milliseconds": 50,
+                                        "key_code": "vk_none"
                                     }
                                 ],
                                 "type": "basic"
@@ -2077,17 +2058,16 @@
                                 ],
                                 "to_if_held_down": [
                                     {
-                                        "key_code": "vk_none",
-                                        "hold_down_milliseconds": 50
+                                        "hold_down_milliseconds": 50,
+                                        "key_code": "vk_none"
                                     },
                                     {
-                                        "key_code": "spacebar",
-                                        "modifiers": ["left_command"],
-                                        "hold_down_milliseconds": 50
+                                        "hold_down_milliseconds": 50,
+                                        "key_code": "caps_lock"
                                     },
                                     {
-                                        "key_code": "vk_none",
-                                        "hold_down_milliseconds": 50
+                                        "hold_down_milliseconds": 50,
+                                        "key_code": "vk_none"
                                     },
                                     {
                                         "halt": true,
@@ -2095,17 +2075,16 @@
                                         "modifiers": ["right_shift"]
                                     },
                                     {
-                                        "key_code": "vk_none",
-                                        "hold_down_milliseconds": 50
+                                        "hold_down_milliseconds": 50,
+                                        "key_code": "vk_none"
                                     },
                                     {
-                                        "key_code": "spacebar",
-                                        "modifiers": ["left_command"],
-                                        "hold_down_milliseconds": 50
+                                        "hold_down_milliseconds": 110,
+                                        "key_code": "caps_lock"
                                     },
                                     {
-                                        "key_code": "vk_none",
-                                        "hold_down_milliseconds": 50
+                                        "hold_down_milliseconds": 50,
+                                        "key_code": "vk_none"
                                     }
                                 ],
                                 "type": "basic"
@@ -2136,17 +2115,16 @@
                                 ],
                                 "to_if_held_down": [
                                     {
-                                        "key_code": "vk_none",
-                                        "hold_down_milliseconds": 50
+                                        "hold_down_milliseconds": 50,
+                                        "key_code": "vk_none"
                                     },
                                     {
-                                        "key_code": "spacebar",
-                                        "modifiers": ["left_command"],
-                                        "hold_down_milliseconds": 50
+                                        "hold_down_milliseconds": 50,
+                                        "key_code": "caps_lock"
                                     },
                                     {
-                                        "key_code": "vk_none",
-                                        "hold_down_milliseconds": 50
+                                        "hold_down_milliseconds": 50,
+                                        "key_code": "vk_none"
                                     },
                                     {
                                         "halt": true,
@@ -2154,17 +2132,16 @@
                                         "modifiers": ["right_shift"]
                                     },
                                     {
-                                        "key_code": "vk_none",
-                                        "hold_down_milliseconds": 50
+                                        "hold_down_milliseconds": 50,
+                                        "key_code": "vk_none"
                                     },
                                     {
-                                        "key_code": "spacebar",
-                                        "modifiers": ["left_command"],
-                                        "hold_down_milliseconds": 50
+                                        "hold_down_milliseconds": 110,
+                                        "key_code": "caps_lock"
                                     },
                                     {
-                                        "key_code": "vk_none",
-                                        "hold_down_milliseconds": 50
+                                        "hold_down_milliseconds": 50,
+                                        "key_code": "vk_none"
                                     }
                                 ],
                                 "type": "basic"
@@ -2188,17 +2165,16 @@
                                 },
                                 "to_after_key_up": [
                                     {
-                                        "key_code": "vk_none",
-                                        "hold_down_milliseconds": 50
+                                        "hold_down_milliseconds": 50,
+                                        "key_code": "vk_none"
                                     },
                                     {
-                                        "key_code": "spacebar",
-                                        "modifiers": ["left_command"],
-                                        "hold_down_milliseconds": 50
+                                        "hold_down_milliseconds": 50,
+                                        "key_code": "caps_lock"
                                     },
                                     {
-                                        "key_code": "vk_none",
-                                        "hold_down_milliseconds": 50
+                                        "hold_down_milliseconds": 50,
+                                        "key_code": "vk_none"
                                     },
                                     {
                                         "halt": true,
@@ -2206,32 +2182,30 @@
                                         "modifiers": []
                                     },
                                     {
-                                        "key_code": "vk_none",
-                                        "hold_down_milliseconds": 50
+                                        "hold_down_milliseconds": 50,
+                                        "key_code": "vk_none"
                                     },
                                     {
-                                        "key_code": "spacebar",
-                                        "modifiers": ["left_command"],
-                                        "hold_down_milliseconds": 50
+                                        "hold_down_milliseconds": 110,
+                                        "key_code": "caps_lock"
                                     },
                                     {
-                                        "key_code": "vk_none",
-                                        "hold_down_milliseconds": 50
+                                        "hold_down_milliseconds": 50,
+                                        "key_code": "vk_none"
                                     }
                                 ],
                                 "to_if_held_down": [
                                     {
-                                        "key_code": "vk_none",
-                                        "hold_down_milliseconds": 50
+                                        "hold_down_milliseconds": 50,
+                                        "key_code": "vk_none"
                                     },
                                     {
-                                        "key_code": "spacebar",
-                                        "modifiers": ["left_command"],
-                                        "hold_down_milliseconds": 50
+                                        "hold_down_milliseconds": 50,
+                                        "key_code": "caps_lock"
                                     },
                                     {
-                                        "key_code": "vk_none",
-                                        "hold_down_milliseconds": 50
+                                        "hold_down_milliseconds": 50,
+                                        "key_code": "vk_none"
                                     },
                                     {
                                         "halt": true,
@@ -2239,17 +2213,16 @@
                                         "modifiers": ["right_shift"]
                                     },
                                     {
-                                        "key_code": "vk_none",
-                                        "hold_down_milliseconds": 50
+                                        "hold_down_milliseconds": 50,
+                                        "key_code": "vk_none"
                                     },
                                     {
-                                        "key_code": "spacebar",
-                                        "modifiers": ["left_command"],
-                                        "hold_down_milliseconds": 50
+                                        "hold_down_milliseconds": 110,
+                                        "key_code": "caps_lock"
                                     },
                                     {
-                                        "key_code": "vk_none",
-                                        "hold_down_milliseconds": 50
+                                        "hold_down_milliseconds": 50,
+                                        "key_code": "vk_none"
                                     }
                                 ],
                                 "type": "basic"
@@ -2273,17 +2246,16 @@
                                 },
                                 "to_after_key_up": [
                                     {
-                                        "key_code": "vk_none",
-                                        "hold_down_milliseconds": 50
+                                        "hold_down_milliseconds": 50,
+                                        "key_code": "vk_none"
                                     },
                                     {
-                                        "key_code": "spacebar",
-                                        "modifiers": ["left_command"],
-                                        "hold_down_milliseconds": 50
+                                        "hold_down_milliseconds": 50,
+                                        "key_code": "caps_lock"
                                     },
                                     {
-                                        "key_code": "vk_none",
-                                        "hold_down_milliseconds": 50
+                                        "hold_down_milliseconds": 50,
+                                        "key_code": "vk_none"
                                     },
                                     {
                                         "halt": true,
@@ -2291,32 +2263,30 @@
                                         "modifiers": []
                                     },
                                     {
-                                        "key_code": "vk_none",
-                                        "hold_down_milliseconds": 50
+                                        "hold_down_milliseconds": 50,
+                                        "key_code": "vk_none"
                                     },
                                     {
-                                        "key_code": "spacebar",
-                                        "modifiers": ["left_command"],
-                                        "hold_down_milliseconds": 50
+                                        "hold_down_milliseconds": 110,
+                                        "key_code": "caps_lock"
                                     },
                                     {
-                                        "key_code": "vk_none",
-                                        "hold_down_milliseconds": 50
+                                        "hold_down_milliseconds": 50,
+                                        "key_code": "vk_none"
                                     }
                                 ],
                                 "to_if_held_down": [
                                     {
-                                        "key_code": "vk_none",
-                                        "hold_down_milliseconds": 50
+                                        "hold_down_milliseconds": 50,
+                                        "key_code": "vk_none"
                                     },
                                     {
-                                        "key_code": "spacebar",
-                                        "modifiers": ["left_command"],
-                                        "hold_down_milliseconds": 50
+                                        "hold_down_milliseconds": 50,
+                                        "key_code": "caps_lock"
                                     },
                                     {
-                                        "key_code": "vk_none",
-                                        "hold_down_milliseconds": 50
+                                        "hold_down_milliseconds": 50,
+                                        "key_code": "vk_none"
                                     },
                                     {
                                         "halt": true,
@@ -2324,17 +2294,16 @@
                                         "modifiers": ["right_shift"]
                                     },
                                     {
-                                        "key_code": "vk_none",
-                                        "hold_down_milliseconds": 50
+                                        "hold_down_milliseconds": 50,
+                                        "key_code": "vk_none"
                                     },
                                     {
-                                        "key_code": "spacebar",
-                                        "modifiers": ["left_command"],
-                                        "hold_down_milliseconds": 50
+                                        "hold_down_milliseconds": 110,
+                                        "key_code": "caps_lock"
                                     },
                                     {
-                                        "key_code": "vk_none",
-                                        "hold_down_milliseconds": 50
+                                        "hold_down_milliseconds": 50,
+                                        "key_code": "vk_none"
                                     }
                                 ],
                                 "type": "basic"
