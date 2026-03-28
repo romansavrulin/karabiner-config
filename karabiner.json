@@ -325,8 +325,8 @@
                                 },
                                 "parameters": {
                                     "basic.simultaneous_threshold_milliseconds": 1,
-                                    "basic.to_if_alone_timeout_milliseconds": 200,
-                                    "basic.to_if_held_down_threshold_milliseconds": 200
+                                    "basic.to_if_alone_timeout_milliseconds": 250,
+                                    "basic.to_if_held_down_threshold_milliseconds": 300
                                 },
                                 "to": [{ "key_code": "left_shift" }],
                                 "to_if_alone": [
@@ -3645,6 +3645,14 @@
                         "is_keyboard": true,
                         "product_id": 257,
                         "vendor_id": 10205
+                    },
+                    "ignore": true
+                },
+                {
+                    "identifiers": {
+                        "is_keyboard": true,
+                        "product_id": 4097,
+                        "vendor_id": 3118
                     },
                     "ignore": true
                 }
