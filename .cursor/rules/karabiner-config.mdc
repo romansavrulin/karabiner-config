@@ -1,0 +1,52 @@
+---
+description: Karabiner Elements config conventions for this repo
+globs: "**/*.json"
+alwaysApply: true
+---
+
+# Karabiner Elements Config
+
+This repo is a personal Karabiner-Elements config for macOS. The single source of truth is `karabiner.json`. See `README.md` for a full reference of all layers and rules.
+
+## Structure
+
+- One profile: `"Internal"` (ANSI, built-in keyboard)
+- All remapping is done via **complex modifications** — no simple_modifications
+- Global held-down threshold: **120 ms** (per-rule overrides: 130–135 ms)
+
+## Layer Variables
+
+| Variable | Trigger | Resets on |
+|----------|---------|-----------|
+| `nav_layer = 1` | Hold `Space` | Release `Space` |
+| `num_layer = 1` | Hold `Right Cmd` while `nav_layer` is active | Release `Space` |
+
+## Manipulator Conventions
+
+- `to_if_held_down` + `to_after_key_up` pattern for tap-vs-hold
+- `halt: true` on `to_if_held_down` to suppress the tap action
+- `repeat: false` on most `to_after_key_up` entries
+- `vk_none` sequences used as timing/cancellation guards around `caps_lock` toggle (necessary because macOS handles caps_lock toggle differently)
+- `input_source_if` with `language: "en"` / `"ru"` for bilingual layout-independent symbols
+- `device_if` / `device_unless` with `vendor_id` / `product_id` for per-keyboard overrides
+
+## When Editing
+
+- Always keep manipulators within the correct rule `description` block
+- Maintain the global parameter `"basic.to_if_held_down_threshold_milliseconds": 120` at the top of `complex_modifications`
+- When adding a new symbol to nav_layer: add both an EN and a RU variant using `input_source_if`
+- Karabiner reloads the config automatically when `karabiner.json` is saved
+- Validate JSON before saving: `python3 -m json.tool karabiner.json > /dev/null`
+
+## Key Rule Positions in karabiner.json
+
+1. F modifiers (line ~9)
+2. Homerow modifiers / Caps Lock (line ~266)
+3. Flycut (line ~416)
+4. Vol control (line ~442)
+5. Language switch / Register switch / Yo (line ~479)
+6. Dictation (line ~566)
+7. Num layer (line ~592)
+8. Navigation layer (line ~849)
+9. Column key placement remap
+10. Autoshift
