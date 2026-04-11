@@ -13,7 +13,7 @@
                         "description": "Windows App (RDP) - specific workflow:",
                         "manipulators": [
                             {
-                                "description": "DISABLED: Swap left cmd to left ctrl",
+                                "description": "Swap left cmd to left ctrl for mouse navigation",
                                 "conditions": [
                                     {
                                         "bundle_identifiers": [
@@ -26,11 +26,6 @@
                                             "^com\\.vmware\\.horizon$"
                                         ],
                                         "type": "frontmost_application_if"
-                                    },
-                                    {
-                                        "name": "rdp_swap_disabled",
-                                        "type": "variable_if",
-                                        "value": 1
                                     }
                                 ],
                                 "from": {
@@ -44,6 +39,26 @@
                                 "to": [
                                     {
                                         "key_code": "left_control"
+                                    }
+                                ],
+                                "to_if_alone": [
+                                    {
+                                        "key_code": "left_command"
+                                    }
+                                ],
+                                "to_if_other_key_pressed": [
+                                    {
+                                        "other_keys": [
+                                            {
+                                                "any": "key_code",
+                                                "modifiers": { "optional": ["any"] }
+                                            }
+                                        ],
+                                        "to": [
+                                            {
+                                                "key_code": "left_command"
+                                            }
+                                        ]
                                     }
                                 ],
                                 "type": "basic"
