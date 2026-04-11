@@ -50,15 +50,56 @@
                                             "^com\\.microsoft\\.rdc\\.mac$"
                                         ],
                                         "type": "frontmost_application_if"
+                                    },
+                                    {
+                                        "input_sources": [{ "language": "en" }],
+                                        "type": "input_source_if"
                                     }
                                 ],
-                                "description": "Caps Lock -> Alt+Shift for Windows language toggle",
+                                "description": "Caps Lock: EN->RU + Alt+Shift for Windows",
                                 "from": {
                                     "key_code": "caps_lock",
                                     "modifiers": { "optional": ["any"] }
                                 },
-                                "parameters": { "basic.to_if_held_down_threshold_milliseconds": 200 },
                                 "to": [
+                                    {
+                                        "select_input_source": {
+                                            "language": "ru"
+                                        }
+                                    },
+                                    {
+                                        "key_code": "left_shift",
+                                        "modifiers": ["left_alt"],
+                                        "hold_down_milliseconds": 200
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "^com\\.microsoft\\.rdc\\.macos$",
+                                            "^com\\.microsoft\\.rdc\\.mac$"
+                                        ],
+                                        "type": "frontmost_application_if"
+                                    },
+                                    {
+                                        "input_sources": [{ "language": "ru" }],
+                                        "type": "input_source_if"
+                                    }
+                                ],
+                                "description": "Caps Lock: RU->EN + Alt+Shift for Windows",
+                                "from": {
+                                    "key_code": "caps_lock",
+                                    "modifiers": { "optional": ["any"] }
+                                },
+                                "to": [
+                                    {
+                                        "select_input_source": {
+                                            "language": "en"
+                                        }
+                                    },
                                     {
                                         "key_code": "left_shift",
                                         "modifiers": ["left_alt"],
