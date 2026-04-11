@@ -6,6 +6,45 @@
                 "parameters": { "basic.to_if_held_down_threshold_milliseconds": 120 },
                 "rules": [
                     {
+                        "description": "Windows App (RDP) - Swap left cmd and left ctrl",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "^com\\.microsoft\\.rdc\\.macos$",
+                                            "^com\\.microsoft\\.rdc\\.mac$"
+                                        ],
+                                        "type": "frontmost_application_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "left_command",
+                                    "modifiers": { "optional": ["any"] }
+                                },
+                                "to": [{ "key_code": "left_control" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "^com\\.microsoft\\.rdc\\.macos$",
+                                            "^com\\.microsoft\\.rdc\\.mac$"
+                                        ],
+                                        "type": "frontmost_application_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "left_control",
+                                    "modifiers": { "optional": ["any"] }
+                                },
+                                "to": [{ "key_code": "left_command" }],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
                         "description": "F modifiers",
                         "manipulators": [
                             {
@@ -325,7 +364,7 @@
                                 },
                                 "parameters": {
                                     "basic.simultaneous_threshold_milliseconds": 1,
-                                    "basic.to_if_alone_timeout_milliseconds": 250,
+                                    "basic.to_if_alone_timeout_milliseconds": 300,
                                     "basic.to_if_held_down_threshold_milliseconds": 300
                                 },
                                 "to": [{ "key_code": "left_shift" }],
