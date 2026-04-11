@@ -6,9 +6,10 @@
                 "parameters": { "basic.to_if_held_down_threshold_milliseconds": 120 },
                 "rules": [
                     {
-                        "description": "Windows App (RDP) - Swap left cmd and left ctrl",
+                        "description": "Windows App (RDP) - specific workflow:",
                         "manipulators": [
                             {
+                                "description": "Swap left cmd to left ctrl",
                                 "conditions": [
                                     {
                                         "bundle_identifiers": [
@@ -26,6 +27,7 @@
                                 "type": "basic"
                             },
                             {
+                                "description": "Swap left ctrl to left cmd",
                                 "conditions": [
                                     {
                                         "bundle_identifiers": [
@@ -104,6 +106,110 @@
                                         "key_code": "left_shift",
                                         "modifiers": ["left_alt"],
                                         "hold_down_milliseconds": 200
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "^com\\.microsoft\\.rdc\\.macos$",
+                                            "^com\\.microsoft\\.rdc\\.mac$"
+                                        ],
+                                        "type": "frontmost_application_if"
+                                    },
+                                    {
+                                        "name": "nav_layer",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "description": "nav_layer f -> set rdp_cmd_layer for Home/End",
+                                "from": {
+                                    "key_code": "f",
+                                    "modifiers": { "optional": ["any"] }
+                                },
+                                "to": [
+                                    {
+                                        "set_variable": {
+                                            "name": "rdp_cmd_layer",
+                                            "value": 1
+                                        }
+                                    }
+                                ],
+                                "to_after_key_up": [
+                                    {
+                                        "set_variable": {
+                                            "name": "rdp_cmd_layer",
+                                            "value": 0
+                                        }
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "^com\\.microsoft\\.rdc\\.macos$",
+                                            "^com\\.microsoft\\.rdc\\.mac$"
+                                        ],
+                                        "type": "frontmost_application_if"
+                                    },
+                                    {
+                                        "name": "nav_layer",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "rdp_cmd_layer",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "description": "nav_layer f+j -> Home (Windows)",
+                                "from": {
+                                    "key_code": "j",
+                                    "modifiers": { "optional": ["any"] }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "home",
+                                        "repeat": true
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "^com\\.microsoft\\.rdc\\.macos$",
+                                            "^com\\.microsoft\\.rdc\\.mac$"
+                                        ],
+                                        "type": "frontmost_application_if"
+                                    },
+                                    {
+                                        "name": "nav_layer",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "rdp_cmd_layer",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "description": "nav_layer f+l -> End (Windows)",
+                                "from": {
+                                    "key_code": "l",
+                                    "modifiers": { "optional": ["any"] }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "end",
+                                        "repeat": true
                                     }
                                 ],
                                 "type": "basic"
