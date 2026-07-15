@@ -165,7 +165,7 @@
                                         ]
                                     }
                                 },
-                                "to": [
+                                "to_if_alone": [
                                     {
                                         "select_input_source": {
                                             "language": "ru"
@@ -177,6 +177,11 @@
                                             "left_alt"
                                         ],
                                         "hold_down_milliseconds": 200
+                                    }
+                                ],
+                                "to_if_held_down": [
+                                    {
+                                        "key_code": "left_shift"
                                     }
                                 ],
                                 "type": "basic"
@@ -212,7 +217,7 @@
                                         ]
                                     }
                                 },
-                                "to": [
+                                "to_if_alone": [
                                     {
                                         "select_input_source": {
                                             "language": "en"
@@ -224,6 +229,11 @@
                                             "left_alt"
                                         ],
                                         "hold_down_milliseconds": 200
+                                    }
+                                ],
+                                "to_if_held_down": [
+                                    {
+                                        "key_code": "left_shift"
                                     }
                                 ],
                                 "type": "basic"
