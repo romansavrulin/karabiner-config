@@ -2,6 +2,13 @@
 
 Personal keyboard remapping for macOS using [Karabiner-Elements](https://karabiner-elements.pqrs.org/). All remapping is implemented as complex modifications — no simple modifications used.
 
+For correct and fast language switch, use the following terminal commands
+
+```bash
+defaults write kCFPreferencesAnyApplication TSMLanguageIndicatorEnabled 1
+defaults write -g ApplePressAndHoldEnabled -bool false
+```
+
 ## Profile: `Internal`
 
 Single active profile targeting the built-in (ANSI) keyboard. Two external keyboards are explicitly **ignored** (they have their own firmware-level mapping).

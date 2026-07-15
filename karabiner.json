@@ -3349,18 +3349,19 @@
                                         "key_code": "fn"
                                     },
                                     {
-                                        "hold_down_milliseconds": 50,
+                                        "hold_down_milliseconds": 60,
                                         "key_code": "vk_none"
                                     },
                                     {
                                         "halt": true,
                                         "key_code": "comma",
+                                        "hold_down_milliseconds": 10,
                                         "modifiers": [
                                             "right_shift"
                                         ]
                                     },
                                     {
-                                        "hold_down_milliseconds": 50,
+                                        "hold_down_milliseconds": 10,
                                         "key_code": "vk_none"
                                     },
                                     {
