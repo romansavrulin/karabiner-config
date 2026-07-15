@@ -1259,9 +1259,7 @@
                                 "to": [
                                     {
                                         "key_code": "caps_lock",
-                                        "modifiers": [
-                                            "right_command"
-                                        ]
+                                        "modifiers": []
                                     }
                                 ],
                                 "type": "basic"
@@ -1296,15 +1294,7 @@
                                 "to_if_alone": [
                                     {
                                         "hold_down_milliseconds": 50,
-                                        "key_code": "vk_none"
-                                    },
-                                    {
-                                        "hold_down_milliseconds": 50,
-                                        "key_code": "caps_lock"
-                                    },
-                                    {
-                                        "hold_down_milliseconds": 50,
-                                        "key_code": "vk_none"
+                                        "key_code": "fn"
                                     }
                                 ],
                                 "to_if_held_down": [
@@ -1985,12 +1975,8 @@
                                 ],
                                 "to_if_held_down": [
                                     {
-                                        "hold_down_milliseconds": 50,
-                                        "key_code": "vk_none"
-                                    },
-                                    {
-                                        "hold_down_milliseconds": 50,
-                                        "key_code": "caps_lock"
+                                        "hold_down_milliseconds": 30,
+                                        "key_code": "fn"
                                     },
                                     {
                                         "hold_down_milliseconds": 50,
@@ -2008,12 +1994,8 @@
                                         "key_code": "vk_none"
                                     },
                                     {
-                                        "hold_down_milliseconds": 110,
-                                        "key_code": "caps_lock"
-                                    },
-                                    {
-                                        "hold_down_milliseconds": 50,
-                                        "key_code": "vk_none"
+                                        "hold_down_milliseconds": 30,
+                                        "key_code": "fn"
                                     }
                                 ],
                                 "type": "basic"
@@ -2601,12 +2583,8 @@
                                 ],
                                 "to_if_held_down": [
                                     {
-                                        "hold_down_milliseconds": 50,
-                                        "key_code": "vk_none"
-                                    },
-                                    {
-                                        "hold_down_milliseconds": 50,
-                                        "key_code": "caps_lock"
+                                        "hold_down_milliseconds": 30,
+                                        "key_code": "fn"
                                     },
                                     {
                                         "hold_down_milliseconds": 50,
@@ -2624,12 +2602,8 @@
                                         "key_code": "vk_none"
                                     },
                                     {
-                                        "hold_down_milliseconds": 110,
-                                        "key_code": "caps_lock"
-                                    },
-                                    {
-                                        "hold_down_milliseconds": 50,
-                                        "key_code": "vk_none"
+                                        "hold_down_milliseconds": 30,
+                                        "key_code": "fn"
                                     }
                                 ],
                                 "type": "basic"
@@ -2706,12 +2680,8 @@
                                 },
                                 "to_after_key_up": [
                                     {
-                                        "hold_down_milliseconds": 50,
-                                        "key_code": "vk_none"
-                                    },
-                                    {
-                                        "hold_down_milliseconds": 50,
-                                        "key_code": "caps_lock"
+                                        "hold_down_milliseconds": 30,
+                                        "key_code": "fn"
                                     },
                                     {
                                         "hold_down_milliseconds": 50,
@@ -2728,22 +2698,14 @@
                                         "key_code": "vk_none"
                                     },
                                     {
-                                        "hold_down_milliseconds": 110,
-                                        "key_code": "caps_lock"
-                                    },
-                                    {
-                                        "hold_down_milliseconds": 50,
-                                        "key_code": "vk_none"
+                                        "hold_down_milliseconds": 30,
+                                        "key_code": "fn"
                                     }
                                 ],
                                 "to_if_held_down": [
                                     {
-                                        "hold_down_milliseconds": 50,
-                                        "key_code": "vk_none"
-                                    },
-                                    {
-                                        "hold_down_milliseconds": 50,
-                                        "key_code": "caps_lock"
+                                        "hold_down_milliseconds": 30,
+                                        "key_code": "fn"
                                     },
                                     {
                                         "hold_down_milliseconds": 50,
@@ -2761,12 +2723,8 @@
                                         "key_code": "vk_none"
                                     },
                                     {
-                                        "hold_down_milliseconds": 110,
-                                        "key_code": "caps_lock"
-                                    },
-                                    {
-                                        "hold_down_milliseconds": 50,
-                                        "key_code": "vk_none"
+                                        "hold_down_milliseconds": 30,
+                                        "key_code": "fn"
                                     }
                                 ],
                                 "type": "basic"
@@ -2798,12 +2756,8 @@
                                 },
                                 "to_after_key_up": [
                                     {
-                                        "hold_down_milliseconds": 50,
-                                        "key_code": "vk_none"
-                                    },
-                                    {
-                                        "hold_down_milliseconds": 50,
-                                        "key_code": "caps_lock"
+                                        "hold_down_milliseconds": 30,
+                                        "key_code": "fn"
                                     },
                                     {
                                         "hold_down_milliseconds": 50,
@@ -2817,22 +2771,14 @@
                                         "key_code": "vk_none"
                                     },
                                     {
-                                        "hold_down_milliseconds": 110,
-                                        "key_code": "caps_lock"
-                                    },
-                                    {
-                                        "hold_down_milliseconds": 50,
-                                        "key_code": "vk_none"
+                                        "hold_down_milliseconds": 30,
+                                        "key_code": "fn"
                                     }
                                 ],
                                 "to_if_held_down": [
                                     {
-                                        "hold_down_milliseconds": 50,
-                                        "key_code": "vk_none"
-                                    },
-                                    {
-                                        "hold_down_milliseconds": 50,
-                                        "key_code": "caps_lock"
+                                        "hold_down_milliseconds": 30,
+                                        "key_code": "fn"
                                     },
                                     {
                                         "hold_down_milliseconds": 50,
@@ -2850,12 +2796,8 @@
                                         "key_code": "vk_none"
                                     },
                                     {
-                                        "hold_down_milliseconds": 110,
-                                        "key_code": "caps_lock"
-                                    },
-                                    {
-                                        "hold_down_milliseconds": 50,
-                                        "key_code": "vk_none"
+                                        "hold_down_milliseconds": 30,
+                                        "key_code": "fn"
                                     }
                                 ],
                                 "type": "basic"
@@ -3092,12 +3034,8 @@
                                 },
                                 "to_after_key_up": [
                                     {
-                                        "hold_down_milliseconds": 50,
-                                        "key_code": "vk_none"
-                                    },
-                                    {
-                                        "hold_down_milliseconds": 50,
-                                        "key_code": "caps_lock"
+                                        "hold_down_milliseconds": 30,
+                                        "key_code": "fn"
                                     },
                                     {
                                         "hold_down_milliseconds": 50,
@@ -3115,22 +3053,14 @@
                                         "key_code": "vk_none"
                                     },
                                     {
-                                        "hold_down_milliseconds": 110,
-                                        "key_code": "caps_lock"
-                                    },
-                                    {
-                                        "hold_down_milliseconds": 50,
-                                        "key_code": "vk_none"
+                                        "hold_down_milliseconds": 30,
+                                        "key_code": "fn"
                                     }
                                 ],
                                 "to_if_held_down": [
                                     {
-                                        "hold_down_milliseconds": 50,
-                                        "key_code": "vk_none"
-                                    },
-                                    {
-                                        "hold_down_milliseconds": 50,
-                                        "key_code": "caps_lock"
+                                        "hold_down_milliseconds": 30,
+                                        "key_code": "fn"
                                     },
                                     {
                                         "hold_down_milliseconds": 50,
@@ -3149,12 +3079,8 @@
                                         "key_code": "vk_none"
                                     },
                                     {
-                                        "hold_down_milliseconds": 110,
-                                        "key_code": "caps_lock"
-                                    },
-                                    {
-                                        "hold_down_milliseconds": 50,
-                                        "key_code": "vk_none"
+                                        "hold_down_milliseconds": 30,
+                                        "key_code": "fn"
                                     }
                                 ],
                                 "type": "basic"
@@ -3230,12 +3156,8 @@
                                 ],
                                 "to_if_held_down": [
                                     {
-                                        "hold_down_milliseconds": 50,
-                                        "key_code": "vk_none"
-                                    },
-                                    {
-                                        "hold_down_milliseconds": 50,
-                                        "key_code": "caps_lock"
+                                        "hold_down_milliseconds": 30,
+                                        "key_code": "fn"
                                     },
                                     {
                                         "hold_down_milliseconds": 50,
@@ -3250,12 +3172,8 @@
                                         "key_code": "vk_none"
                                     },
                                     {
-                                        "hold_down_milliseconds": 110,
-                                        "key_code": "caps_lock"
-                                    },
-                                    {
-                                        "hold_down_milliseconds": 50,
-                                        "key_code": "vk_none"
+                                        "hold_down_milliseconds": 30,
+                                        "key_code": "fn"
                                     }
                                 ],
                                 "type": "basic"
@@ -3427,12 +3345,8 @@
                                 ],
                                 "to_if_held_down": [
                                     {
-                                        "hold_down_milliseconds": 50,
-                                        "key_code": "vk_none"
-                                    },
-                                    {
-                                        "hold_down_milliseconds": 50,
-                                        "key_code": "caps_lock"
+                                        "hold_down_milliseconds": 30,
+                                        "key_code": "fn"
                                     },
                                     {
                                         "hold_down_milliseconds": 50,
@@ -3450,12 +3364,8 @@
                                         "key_code": "vk_none"
                                     },
                                     {
-                                        "hold_down_milliseconds": 110,
-                                        "key_code": "caps_lock"
-                                    },
-                                    {
-                                        "hold_down_milliseconds": 50,
-                                        "key_code": "vk_none"
+                                        "hold_down_milliseconds": 30,
+                                        "key_code": "fn"
                                     }
                                 ],
                                 "type": "basic"
@@ -3496,12 +3406,8 @@
                                 ],
                                 "to_if_held_down": [
                                     {
-                                        "hold_down_milliseconds": 50,
-                                        "key_code": "vk_none"
-                                    },
-                                    {
-                                        "hold_down_milliseconds": 50,
-                                        "key_code": "caps_lock"
+                                        "hold_down_milliseconds": 30,
+                                        "key_code": "fn"
                                     },
                                     {
                                         "hold_down_milliseconds": 50,
@@ -3519,12 +3425,8 @@
                                         "key_code": "vk_none"
                                     },
                                     {
-                                        "hold_down_milliseconds": 110,
-                                        "key_code": "caps_lock"
-                                    },
-                                    {
-                                        "hold_down_milliseconds": 50,
-                                        "key_code": "vk_none"
+                                        "hold_down_milliseconds": 30,
+                                        "key_code": "fn"
                                     }
                                 ],
                                 "type": "basic"
@@ -3556,12 +3458,8 @@
                                 },
                                 "to_after_key_up": [
                                     {
-                                        "hold_down_milliseconds": 50,
-                                        "key_code": "vk_none"
-                                    },
-                                    {
-                                        "hold_down_milliseconds": 50,
-                                        "key_code": "caps_lock"
+                                        "hold_down_milliseconds": 30,
+                                        "key_code": "fn"
                                     },
                                     {
                                         "hold_down_milliseconds": 50,
@@ -3577,22 +3475,14 @@
                                         "key_code": "vk_none"
                                     },
                                     {
-                                        "hold_down_milliseconds": 110,
-                                        "key_code": "caps_lock"
-                                    },
-                                    {
-                                        "hold_down_milliseconds": 50,
-                                        "key_code": "vk_none"
+                                        "hold_down_milliseconds": 30,
+                                        "key_code": "fn"
                                     }
                                 ],
                                 "to_if_held_down": [
                                     {
-                                        "hold_down_milliseconds": 50,
-                                        "key_code": "vk_none"
-                                    },
-                                    {
-                                        "hold_down_milliseconds": 50,
-                                        "key_code": "caps_lock"
+                                        "hold_down_milliseconds": 30,
+                                        "key_code": "fn"
                                     },
                                     {
                                         "hold_down_milliseconds": 50,
@@ -3610,12 +3500,8 @@
                                         "key_code": "vk_none"
                                     },
                                     {
-                                        "hold_down_milliseconds": 110,
-                                        "key_code": "caps_lock"
-                                    },
-                                    {
-                                        "hold_down_milliseconds": 50,
-                                        "key_code": "vk_none"
+                                        "hold_down_milliseconds": 30,
+                                        "key_code": "fn"
                                     }
                                 ],
                                 "type": "basic"
@@ -3647,12 +3533,8 @@
                                 },
                                 "to_after_key_up": [
                                     {
-                                        "hold_down_milliseconds": 50,
-                                        "key_code": "vk_none"
-                                    },
-                                    {
-                                        "hold_down_milliseconds": 50,
-                                        "key_code": "caps_lock"
+                                        "hold_down_milliseconds": 30,
+                                        "key_code": "fn"
                                     },
                                     {
                                         "hold_down_milliseconds": 50,
@@ -3668,22 +3550,14 @@
                                         "key_code": "vk_none"
                                     },
                                     {
-                                        "hold_down_milliseconds": 110,
-                                        "key_code": "caps_lock"
-                                    },
-                                    {
-                                        "hold_down_milliseconds": 50,
-                                        "key_code": "vk_none"
+                                        "hold_down_milliseconds": 30,
+                                        "key_code": "fn"
                                     }
                                 ],
                                 "to_if_held_down": [
                                     {
-                                        "hold_down_milliseconds": 50,
-                                        "key_code": "vk_none"
-                                    },
-                                    {
-                                        "hold_down_milliseconds": 50,
-                                        "key_code": "caps_lock"
+                                        "hold_down_milliseconds": 30,
+                                        "key_code": "fn"
                                     },
                                     {
                                         "hold_down_milliseconds": 50,
@@ -3701,12 +3575,8 @@
                                         "key_code": "vk_none"
                                     },
                                     {
-                                        "hold_down_milliseconds": 110,
-                                        "key_code": "caps_lock"
-                                    },
-                                    {
-                                        "hold_down_milliseconds": 50,
-                                        "key_code": "vk_none"
+                                        "hold_down_milliseconds": 30,
+                                        "key_code": "fn"
                                     }
                                 ],
                                 "type": "basic"
